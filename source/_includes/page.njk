@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+
+{% include "components/header.njk" %}
+
+<main>
+  {% if tableOfContents %}
+    {% include "components/tableOfContents.njk" %}
+  {% endif %}
+
+  {% for section in pageElements %}
+      {% if section.type === 'markdown' %}
+        {% include "sections/markdown.njk" %}
+
+      {% elif section.type === 'cards' %}
+        {% include "sections/cards.njk" %}
+
+      {% elif section.type === 'figure' %}
+        {% include "sections/figure.njk" %}
+
+      {% endif %}
+  {% endfor %}
+</main>

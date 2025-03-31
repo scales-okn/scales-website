@@ -1,0 +1,22 @@
+.decor-none {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.max-width {
+    max-width: var(--max-width);
+}
+
+.copy-width {
+    max-width: 40rem;
+    margin-inline: auto;
+}
+
+.img-fullscreen {
+    width: 100%;
+    height: 100lvh;
+    object-fit: cover;
+}

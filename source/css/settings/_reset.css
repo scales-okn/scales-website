@@ -1,0 +1,43 @@
+/* Reset adapted from Andy Bell, 2023 https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+body {
+    min-height: 100vh;
+    line-height: 1.4;
+}
+body, h1, h2, h3, h4, p,
+figure, blockquote, ul, ol, dl, dd {
+    margin: 0;
+}
+h1, h2, h3, h4 {
+    font-weight: normal;
+    line-height: 1.1;
+}
+a {
+    color: currentColor;
+}
+ul[role="list"], ol[role="list"] {
+    list-style: none;
+    padding: 0;
+}
+ul, ol {
+    padding-left: 2em;
+}
+img,
+picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+:target {
+    scroll-margin-block: 5ex;
+}

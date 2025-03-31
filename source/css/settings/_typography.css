@@ -1,0 +1,30 @@
+html {  }
+
+footer { font-size: var(--size--1); }
+body { font-size: var(--size-0); }
+h3 { 
+    font-size: var(--size-1); 
+    font-style: italic;
+}
+h2 { font-size: var(--size-3); }
+h1 { font-size: var(--size-4); }
+
+body, h3, .font-serif-0 {
+    font-family: Redaction, serif;
+}
+
+.font-serif-1 { font-family: "Redaction 10", Redaction, serif }
+.font-serif-2 { font-family: "Redaction 20", Redaction, serif }
+.font-serif-3 { font-family: "Redaction 35", Redaction, serif }
+
+h1, .font-serif-4 {
+    font-family: "Redaction 50", Redaction, serif;
+}
+
+h2, nav, .cards, .font-sans {
+    font-family: VG5000, sans-serif;
+}
+
+h1, h2, h3 {
+    text-wrap: balance;
+}

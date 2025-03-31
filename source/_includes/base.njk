@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>{{title}} | {{site.title}}</title>
+
+    {% if site.favicon %} {% favicon site.favicon %} {% endif %}
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+    {% include "components/meta.njk" %}
+</head>
+<body class="{{ layout | noext }}" id="top" data-background-color="{{ backgroundColor }}" data-foreground-color="{{ foregroundColor }}">
+    {% include "components/nav.njk" %}
+    {{ content | safe }}
+    {% include "components/footer.njk" %}
+</body>
+</html>

@@ -1,0 +1,52 @@
+<footer data-background-color="{{ backgroundColor }}">
+    <div class="max-width">
+
+        <section>
+            <strong>{{ site.title }}</strong><br>
+            {{ site.address }}
+            {{ site.email }}
+        </section>
+
+        <section>
+            <em>Pages</em>
+            {% set pages = collections.public %}
+            {% if pages %}
+                <ul>
+                    {% for page in pages %}
+                        <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </section>
+
+        {% if site.social_links %}
+        <section>
+            <em>Links</em>
+            <ul>
+            {% for link in site.social_links %}
+                <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+            {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+        {% if site.credits %}
+        <section>
+            <em>Credits</em>
+            <ul>
+            {% for genre, credits in site.credits | groupby("genre") %}
+                <li>
+                    {{ genre | title }}:
+                    {% for credit in credits %}
+                        <a href="{{ credit.url }}" target="_blank">{{ credit.name }}</a>
+                    {% endfor %}
+                </li>
+            {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+        <a href="#top">↑ Top</a>
+
+    </div>
+</footer>

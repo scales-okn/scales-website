@@ -1,0 +1,15 @@
+<nav id="menu">
+{% set pages = collections.public %}
+{% if pages %}
+    <ul role="list">
+        {% for p in pages %}
+            <li>
+                <a href="{{ p.url }}" 
+                    {% if p.url === page.url %} aria-current="page" {% endif %}>
+                {{ p.data.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</nav>

@@ -1,0 +1,17 @@
+{
+  "social_links": [
+    {
+      "name": "Newsletter",
+      "url": "/"
+    }
+  ],
+  "homeSlug": "home",
+  "url": "https://scales-okn.org/",
+  "construction": false,
+  "favicon": "",
+  "title": "SCALES-OKN",
+  "language": "en",
+  "description": "SCALES-OKN is transforming the transparency and accountability of the federal judiciary",
+  "address": "123 court st, chicago il 60600",
+  "email": "info@scales-okn.org"
+}

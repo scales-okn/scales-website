@@ -1,0 +1,62 @@
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 70rem;
+
+	article {
+		flex: 1 1 0;
+		padding: var(--space-0);
+		padding-top: var(--space-3);
+		position: relative;
+		min-height: 8rem;
+		min-width: min(14rem, 100vw);
+		font-size: var(--size-2);
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		line-height: 1;
+		gap: .5ex;
+		max-width: 50rem;
+	}
+	article::after {
+		content: '→';
+	}
+	a {
+		margin-top: auto;
+	}
+	a::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+}
+
+@media (min-width: 60rem) {
+	.cards {
+		padding-inline: var(--space-2);
+		gap: var(--space-2);
+		position: absolute;
+		translate: 0 -50%;
+		flex-wrap: nowrap;
+
+		article {
+			padding-top: var(--space-1);
+			height: 20rem;
+			overflow: hidden;
+			border-radius: 15px;
+			align-items: flex-start;
+			min-width: unset;
+		}
+
+		a { margin-top: 0 }
+		article::after { margin-top: auto }
+
+		:has(+ &) {
+			padding-bottom: 12rem;
+		}
+		& + * {
+			padding-top: 12rem;
+		}
+	}
+}

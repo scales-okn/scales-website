@@ -1,0 +1,10 @@
+<figure {% if section.color %} data-color="{{ section.color }}" {% endif %}>
+	{% if section.imgSrc %}
+		<div class="placeholder"></div>
+	{% elif section.vidSrc %}
+	{% endif %}
+
+	{% if section.caption %}
+		<figcaption>{{ section.caption }}</figcaption>
+	{% endif %}
+</figure>

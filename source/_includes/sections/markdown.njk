@@ -1,0 +1,14 @@
+<section 
+  id="{{ section.heading | slugify }}" 
+  {% if section.color %} class="--foreground: var(--{{ section.color }})" {% endif %}
+  >
+  
+  <h2>{{ section.heading }}</h2>
+
+  <div class="text">{{ section.body | markdown | safe }}</div>
+
+  {% if section.aside %}
+    <aside>{{ section.aside | markdown | safe }}</aside>
+  {% endif %}
+
+</section>

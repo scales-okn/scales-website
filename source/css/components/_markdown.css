@@ -1,0 +1,21 @@
+section { 
+	padding: var(--space-5) var(--space-0);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-0);
+
+	h2 {
+		flex: 0 0 100%;
+	}
+
+	.text {
+		flex: 2 1 15rem;
+		max-width: 35rem;
+	}
+
+	aside {
+		font-size: var(--size--2);
+		flex: 1 0 10rem;
+		max-width: 30em;
+	}
+}

@@ -1,0 +1,97 @@
+body {
+	--accent: var(--white);
+	--text: var(--white);
+	--ground: var(--black);
+	background: var(--ground);
+	color: var(--text);
+}
+section, article {
+	background: var(--ground);
+	color: var(--text);
+}
+
+
+[data-background-color="orange"] {
+	color: var(--orange);
+	background: var(--orange);
+}
+[data-background-color="purple"] {
+	color: var(--purple);
+	background: var(--purple);
+	footer { color: var(--white) }
+}
+[data-background-color="lime"] {
+	color: var(--black);
+	background: var(--lime);
+	footer { color: var(--black) }
+	#menu { background: var(--lime) }
+}
+[data-background-color="pink"] {
+	color: var(--black);
+	background: var(--pink);
+	footer { color: var(--black) }
+	#menu { background: var(--pink) }
+}
+[data-background-color="forest"] {
+	color: var(--forest);
+	background: var(--forest);
+	footer { color: var(--black) }
+	#menu { background: var(--forest) }
+}
+
+[data-foreground-color="navy"] {
+	nav, header, footer { color: var(--navy) }
+	main { background: var(--navy) }
+	color: var(--white);
+}
+[data-foreground-color="orange"] {
+	nav, header { color: var(--orange) }
+	main { background: var(--orange) }
+	color: var(--black);
+}
+[data-foreground-color="forest"] {
+	nav, header { color: var(--forest) }
+	main { background: var(--forest) }
+	color: var(--white);
+	main nav { color: var(--white) }
+}
+[data-foreground-color="lime"] {
+	nav, header { color: var(--lime) }
+	main { background: var(--lime) }
+	color: var(--black);
+	main nav { color: var(--black) }
+}
+
+
+[data-color="lime"] { 
+	background-color: var(--lime); 
+	color: var(--black);
+}
+[data-color="orange"] { 
+	background-color: var(--orange); 
+	color: var(--black);
+}
+[data-color="pink"] { 
+	background-color: var(--pink); 
+	color: var(--black);
+}
+[data-color="teal"] { 
+	background-color: var(--teal); 
+	color: var(--black);
+}
+[data-color="yellow"] { 
+	background-color: var(--yellow); 
+	color: var(--black);
+}
+[data-color="forest"] { 
+	background-color: var(--forest); 
+	color: var(--white);
+}
+[data-color="navy"] { 
+	background-color: var(--navy); 
+	color: var(--white);
+}
+[data-color="purple"] { 
+	background-color: var(--purple); 
+	color: var(--white);
+}

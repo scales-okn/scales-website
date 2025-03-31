@@ -1,0 +1,20 @@
+{
+  "name": "scales-website",
+  "description": "a site for SCALES-OKN",
+  "url": "https://scales-okn.org",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "npm run serve",
+    "dev": "npm run serve"
+  },
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy-img": "^6.0.1",
+    "browserslist": "^4.24.4",
+    "lightningcss": "^1.29.3",
+    "markdown-it": "^14.1.0"
+  }
+}

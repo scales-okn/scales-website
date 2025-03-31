@@ -8,6 +8,10 @@
     "start": "npm run serve",
     "dev": "npm run serve"
   },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=10"
+  },
   "type": "module",
   "license": "MIT",
   "devDependencies": {

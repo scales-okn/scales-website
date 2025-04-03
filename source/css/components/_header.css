@@ -1,5 +1,5 @@
 header {
 	height: auto;
 	min-height: max(80svh, 10rem);
-	padding: var(--space-3) var(--space-1);
+	padding: var(--space-5) var(--space-1);
 }

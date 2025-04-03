@@ -2,6 +2,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 1;
 	
 	ul {
 		display: flex;
@@ -11,6 +12,6 @@
 	}
 }
 
-.tableOfContents {
-
+.contents {
+	padding: var(--space-1);
 }

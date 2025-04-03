@@ -1,0 +1,15 @@
+{% macro colors(ground, accent) %}
+	{% if ground in ['black', 'navy', 'forest', 'purple'] %}
+		{% set text = 'white' %}
+	{% else %}
+		{% set text = 'black' %}
+	{% endif %}
+	{% if ground %}
+		--ground: var(--{{ ground }}); 
+		--text: var(--{{ text }});
+	{% endif %}
+	{% if accent %}
+		--accent: var(--{{ accent }}); 
+		--accentText: var(--{{ ground }});
+	{% endif %}
+{% endmacro %}

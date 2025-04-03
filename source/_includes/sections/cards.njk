@@ -1,7 +1,9 @@
+{% from "../macros.njk" import colors %}
+
 <div class="cards" data-count="{{ section.cards | length }}">
 	{% for card in section.cards %}
 		{% set page = collections.all | telepage(card.title) %}
-		<article style="--ground: var(--{{ page.data.groundColor or 'black' }}); --accent: var(--{{ page.data.accentColor or 'white' }}); --text: var(--{{ page.data.groundColor | contrast }})">
+		<article style="{{ colors(page.data.groundColor, page.data.accentColor) }}">
 			<a href="{{ page.page.url }}">{{ card.text | truncate(28) }}</a>
 		</article>
 	{% endfor %}

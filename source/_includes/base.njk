@@ -1,3 +1,5 @@
+{% from 'macros.njk' import colors %}
+
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
 <head>
@@ -12,7 +14,7 @@
 
     {% include "components/meta.njk" %}
 </head>
-<body class="{{ layout | noext }}" id="top" data-background-color="{{ backgroundColor }}" data-foreground-color="{{ foregroundColor }}">
+<body id="top" class="{{ layout | noext }}" style="{{ colors(groundColor, accentColor) }}">
     {% include "components/nav.njk" %}
     {{ content | safe }}
     {% include "components/footer.njk" %}

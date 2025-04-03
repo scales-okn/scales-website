@@ -1,4 +1,6 @@
-<figure {% if section.color %} data-color="{{ section.color }}" {% endif %}>
+{% from "../macros.njk" import colors %}
+
+<figure style="{{ colors(section.color) }}">
 	{% if section.imgSrc %}
 		<div class="placeholder"></div>
 	{% elif section.vidSrc %}

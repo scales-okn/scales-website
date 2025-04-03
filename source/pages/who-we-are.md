@@ -3,7 +3,7 @@ title: Who We Are
 excerpt: null
 publishPage: true
 tableOfContents: true
-groundColor: pink
+groundColor: yellow
 accentColor: purple
 pageElements:
   - type: markdown

@@ -1,7 +1,6 @@
-<section 
-  id="{{ section.heading | slugify }}" 
-  {% if section.color %} class="--foreground: var(--{{ section.color }})" {% endif %}
-  >
+{% from "../macros.njk" import colors %}
+
+<section id="{{ section.heading | slugify }}" style="{{ colors(section.color) }}">
   
   <h2>{{ section.heading }}</h2>
 

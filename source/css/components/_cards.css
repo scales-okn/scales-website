@@ -58,7 +58,7 @@
 			position: absolute;
 			translate: 0 -50%;
 		}
-		:has(+ .cards) {
+		:is(section, figure):has(+ .cards) {
 			padding-bottom: 12rem;
 		}
 		.cards + * {

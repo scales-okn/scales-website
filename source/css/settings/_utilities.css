@@ -20,3 +20,13 @@
     height: 100lvh;
     object-fit: cover;
 }
+
+.a-container {
+    position: relative;
+
+    a::after { 
+        content: '';
+        position: absolute;
+        inset: 0;
+    }
+}

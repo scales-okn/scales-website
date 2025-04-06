@@ -4,7 +4,7 @@ body {
 	--accent: var(--white);
 	--accentText: var(--white);
 }
-body, section, article, figure {
+body, section, article, figure, .colorize {
 	background: var(--ground);
 	color: var(--text);
 }

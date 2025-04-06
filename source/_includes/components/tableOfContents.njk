@@ -1,12 +1,6 @@
+{% from '../macros.njk' import outline %}
+
 <nav class="contents">
 	<h3>Contents</h3>
-	<ol>
-	{% for section in pageElements %}
-	{% if section.heading %}
-		<li><a href="#{{ section.heading | slugify }}">
-			{{ section.heading }}
-		</a></li>
-	{% endif %}
-	{% endfor %}
-	</ol>
+	{{ outline(pageElements) }}
 </nav>

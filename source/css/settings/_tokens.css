@@ -36,6 +36,9 @@ html {
 	--space-0: 1rem;
 	--space--1: 0.8rem;
 	--space--2: 0.64rem;
+	--space--3: 0.57rem;
+	--space--4: 0.48rem;
 
+	--space-grow: clamp(5mm,7vw - 10mm,3cm);
 	--max-width: 1200px;
 }

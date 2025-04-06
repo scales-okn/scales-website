@@ -1,9 +1,10 @@
 ---
-title: Home
+title: SCALES
 displayHeading: Transforming the Transparency of Federal Courts
 excerpt: null
 publishPage: true
 tableOfContents: false
+menuOrder: 1
 groundColor: purple
 accentColor: orange
 pageElements:

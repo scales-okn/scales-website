@@ -1,0 +1,44 @@
+.contents {
+	padding: var(--space-1);
+	width: fit-content;
+	min-width: 30%;
+	max-width: 20rem;
+}
+
+.outline {
+	line-height: 1;
+	list-style: none;
+	padding: 0;
+
+	li {
+		background: var(--accent);
+		color: var(--accentText);
+		width: 100%;
+		padding: 0.5em 0.8em 0.4em;
+		border-radius: 0.5em;
+		display: flex;
+		margin: 0.2em 0;
+		gap: 0.6em;
+	}
+	li::before {
+		content: '';
+		display: inline-block;
+		margin-top: .15em;
+		aspect-ratio: 1;
+		height: .6em;
+		background: var(--ground);
+		opacity: .3;
+		transition: 500ms opacity, 500ms border-color;
+		border: 1px solid var(--ground);
+	}
+	li:hover::before, li:focus-within::before {
+		opacity: .7;
+		border-color: var(--white);
+	}
+	li[aria-current="true"]::before {
+		opacity: 1;
+	}
+	a {
+		text-decoration: none;
+	}
+}

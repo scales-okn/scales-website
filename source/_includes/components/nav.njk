@@ -1,15 +1,37 @@
+{% from '../macros.njk' import outline %}
+
 <nav id="menu">
-{% set pages = collections.public %}
+{% set pages = collections.public | sort(false, false, data.menuOrder) %}
 {% if pages %}
-    <ul role="list">
-        {% for p in pages %}
-            <li>
-                <a href="{{ p.url }}" 
-                    {% if p.url === page.url %} aria-current="page" {% endif %}>
-                {{ p.data.title }}
+    <ul>
+        {% set this = page %}
+        {% for that in pages %}
+            {% set data = that.data %}
+            {% set title = data.title %}
+            {% set slug = title | slugify  %}
+            {% set url = that.url %}
+            {% set elements = data.pageElements %}
+            {% set style = colors(data.groundColor, data.accentColor) %}
+            {% set id = [slug, "-submenu"] | join %}
+
+            <li class="colorize menu-item" style="{{ style }}">
+                <button id="{{ title }}-button" type="button" aria-expanded="false" aria-controls="{{ slug }}-submenu"></button>
+                <a href="{{ url }}" {% if url === this.url %} aria-current="page" {% endif %}>
+                    {{ title }}
                 </a>
+                <div id="{{ slug }}-submenu">
+                    {{ outline(elements, id, url) }}
+                </div>
             </li>
         {% endfor %}
+        <li class="colorize menu-item" style="--ground:var(--white);--text:var(--black);--accent:var(--black);--accentText:var(--white);">
+            <span>Settings</span>
+            <ul class="outline">
+                <li>Contrast</li>
+                <li>Text Size</li>
+                <li>Animations</li>
+            </ul>
+        </li>
     </ul>
 {% endif %}
 </nav>

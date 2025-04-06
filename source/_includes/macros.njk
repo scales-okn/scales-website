@@ -13,3 +13,23 @@
 		--accentText: var(--{{ ground }});
 	{% endif %}
 {% endmacro %}
+
+{% macro outline(pageElements, id, url) %}
+	{% if pageElements %}
+	<ol class="outline" id="{{ id }}">
+		{% for element in pageElements %}
+			{% set heading = element.heading %}
+			{% set href = [url, "#", heading | slugify] | join %}
+			
+			{% if heading %}
+				<li class="a-container">
+					<a href="{{ href }}">
+						{{ heading }}
+					</a>
+				</li>
+			{% endif %}
+			
+		{% endfor %}
+	</ol>
+	{% endif %}
+{% endmacro %}

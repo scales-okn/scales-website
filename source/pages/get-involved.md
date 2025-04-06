@@ -1,17 +1,18 @@
 ---
-title: Our Impact
+title: Get Involved
 excerpt: null
 publishPage: true
 tableOfContents: true
-groundColor: teal
+menuOrder: 4
+groundColor: orange
 accentColor: purple
 pageElements:
   - type: markdown
-    heading: Background
+    heading: Donate
     body: >-
       Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
   - type: markdown
-    heading: Data Platform
+    heading: Sponsor
     body: >-
       Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
     aside: >-
@@ -23,11 +24,11 @@ pageElements:
       
       4. Sanders AK. (2024) Adding Some Bite to Their Bark: Using AI to Transform the Way the Press Covers the Judiciary. Communications Lawyer 39 (1), 21-30
   - type: markdown
-    heading: Showcase
+    heading: Request a Demo
     body: >-
       Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
   - type: markdown
-    heading: Explore
+    heading: Contact Us
     body: >-
       Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
   

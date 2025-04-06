@@ -2,9 +2,9 @@
 layout: base.njk
 ---
 
-{% include "components/header.njk" %}
+<main id="skip" tabindex="-1">
+  {% include "components/header.njk" %}
 
-<main>
   {% if tableOfContents %}
     {% include "components/tableOfContents.njk" %}
   {% endif %}

@@ -15,6 +15,7 @@
     {% include "components/meta.njk" %}
 </head>
 <body id="top" class="{{ layout | noext }}" style="{{ colors(groundColor, accentColor) }}">
+    <a href="#skip" class="skip-link">Skip to main content</a>
     {% include "components/nav.njk" %}
     {{ content | safe }}
     {% include "components/footer.njk" %}

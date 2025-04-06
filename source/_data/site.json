@@ -12,6 +12,7 @@
   "title": "SCALES-OKN",
   "language": "en",
   "description": "SCALES-OKN is transforming the transparency and accountability of the federal judiciary",
-  "address": "123 court st, chicago il 60600",
+  "address": "123 court st",
+  "address_2": "chicago il 60600",
   "email": "info@scales-okn.org"
 }

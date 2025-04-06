@@ -1,3 +1,24 @@
 footer {
-	padding: var(--space-2) var(--space-0);
+	padding: 0;
+	line-height: 1.1;
+
+	.vitals, .bottom {
+		padding: var(--space-0);
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-1);
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	/* NAV */
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	li {
+		flex: 1 1 12rem;
+		padding: var(--space-0);
+		font-size: var(--size-1);
+	}
 }

@@ -1,24 +1,32 @@
-<footer data-background-color="{{ backgroundColor }}">
-    <div class="max-width">
+{% from '../macros.njk' import colors %}
 
-        <section>
-            <strong>{{ site.title }}</strong><br>
-            {{ site.address }}
-            {{ site.email }}
-        </section>
+<footer>
+    <div class="vitals">
+        <address>
+            <div><strong>{{ site.title }}</strong></div>
+            <div class="location">{{ site.address }} <br> {{ site.address_2 }}</div>
+            <div class="contact">{{ site.email }}</div>
+        </address>
+        <a href="/">Newsletter</a>
+    </div>
 
-        <section>
-            <em>Pages</em>
-            {% set pages = collections.public %}
-            {% if pages %}
-                <ul>
-                    {% for page in pages %}
-                        <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </section>
+    <nav>
+        {% set pages = collections.public %}
+        {% if pages %}
+            <ul role="list">
+                {% for page in pages %}
+                    <li class="colorize" style="{{ colors(page.data.groundColor, page.data.accentColor) }}"><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </nav>
 
+    <div class="bottom">
+        <a href="">Accessibility Statement</a>
+        <a href="#top">↑ Top</a>
+    </div>
+
+    {% if false %}
         {% if site.social_links %}
         <section>
             <em>Links</em>
@@ -45,8 +53,5 @@
             </ul>
         </section>
         {% endif %}
-
-        <a href="#top">↑ Top</a>
-
-    </div>
+    {% endif %}
 </footer>

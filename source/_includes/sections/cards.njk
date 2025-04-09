@@ -1,6 +1,6 @@
 {% from "../macros.njk" import colors %}
 
-<div class="cards" data-count="{{ section.cards | length }}">
+<div class="cards transparent" data-count="{{ section.cards | length }}">
 	{% for card in section.cards %}
 		{% set page = collections.all | telepage(card.title) %}
 		<article style="{{ colors(page.data.groundColor, page.data.accentColor) }}">

@@ -16,13 +16,13 @@
 
 {% macro outline(pageElements, id, url) %}
 	{% if pageElements %}
-	<ol class="outline" id="{{ id }}">
+	<ol class="outline reset" id="{{ id }}">
 		{% for element in pageElements %}
 			{% set heading = element.heading %}
 			{% set href = [url, "#", heading | slugify] | join %}
 			
 			{% if heading %}
-				<li class="a-container">
+				<li class="full-link">
 					<a href="{{ href }}">
 						{{ heading }}
 					</a>

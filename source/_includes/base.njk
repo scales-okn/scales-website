@@ -17,7 +17,9 @@
 <body id="top" class="{{ layout | noext }}" style="{{ colors(groundColor, accentColor) }}">
     <a href="#skip" class="skip-link">Skip to main content</a>
     {% include "components/nav.njk" %}
-    {{ content | safe }}
+    <main id="skip" tabindex="-1">
+        {{ content | safe }}
+    </main>
     {% include "components/footer.njk" %}
 </body>
 </html>

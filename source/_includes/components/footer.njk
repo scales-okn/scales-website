@@ -1,6 +1,6 @@
 {% from '../macros.njk' import colors %}
 
-<footer>
+<footer id="footer">
     <div class="vitals">
         <address>
             <div><strong>{{ site.title }}</strong></div>
@@ -10,16 +10,8 @@
         <a href="/">Newsletter</a>
     </div>
 
-    <nav>
-        {% set pages = collections.public %}
-        {% if pages %}
-            <ul role="list">
-                {% for page in pages %}
-                    <li class="colorize" style="{{ colors(page.data.groundColor, page.data.accentColor) }}"><a href="{{ page.url }}">{{ page.data.title }}</a></li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </nav>
+    {% set navId = 'footer-menu' %}
+    {% include './nav.njk' %}
 
     <div class="bottom">
         <a href="">Accessibility Statement</a>

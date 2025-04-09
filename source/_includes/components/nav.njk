@@ -1,9 +1,10 @@
 {% from '../macros.njk' import outline %}
+{% set navId = navId or "top-menu" %}
 
-<nav id="menu">
-{% set pages = collections.public | sort(false, false, data.menuOrder) %}
+<nav id="{{ navId }}">
+{% set pages = collections.top %}
 {% if pages %}
-    <ul>
+    <ul class="reset">
         {% set this = page %}
         {% for that in pages %}
             {% set data = that.data %}
@@ -14,23 +15,27 @@
             {% set style = colors(data.groundColor, data.accentColor) %}
             {% set id = [slug, "-submenu"] | join %}
 
-            <li class="colorize menu-item" style="{{ style }}">
-                <button id="{{ title }}-button" type="button" aria-expanded="false" aria-controls="{{ slug }}-submenu"></button>
+            <li class="colorize menu-item reset full-link" style="{{ style }}">
+                {# <button id="{{ title }}-button" type="button" aria-expanded="false" aria-controls="{{ slug }}-submenu"></button> #}
                 <a href="{{ url }}" {% if url === this.url %} aria-current="page" {% endif %}>
                     {{ title }}
                 </a>
-                <div id="{{ slug }}-submenu">
-                    {{ outline(elements, id, url) }}
-                </div>
+                {{ outline(elements, id, url) }}
             </li>
         {% endfor %}
         <li class="colorize menu-item" style="--ground:var(--white);--text:var(--black);--accent:var(--black);--accentText:var(--white);">
             <span>Settings</span>
-            <ul class="outline">
+            <ul class="outline reset">
                 <li>Contrast</li>
                 <li>Text Size</li>
                 <li>Animations</li>
             </ul>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="/">SCALES</a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="#footer">Menu</a>
         </li>
     </ul>
 {% endif %}

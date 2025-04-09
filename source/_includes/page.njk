@@ -2,23 +2,21 @@
 layout: base.njk
 ---
 
-<main id="skip" tabindex="-1">
-  {% include "components/header.njk" %}
+{% include "components/header.njk" %}
 
-  {% if tableOfContents %}
-    {% include "components/tableOfContents.njk" %}
-  {% endif %}
+{% if tableOfContents %}
+  {% include "components/tableOfContents.njk" %}
+{% endif %}
 
-  {% for section in pageElements %}
-      {% if section.type === 'markdown' %}
-        {% include "sections/markdown.njk" %}
+{% for section in pageElements %}
+    {% if section.type === 'markdown' %}
+      {% include "sections/markdown.njk" %}
 
-      {% elif section.type === 'cards' %}
-        {% include "sections/cards.njk" %}
+    {% elif section.type === 'cards' %}
+      {% include "sections/cards.njk" %}
 
-      {% elif section.type === 'figure' %}
-        {% include "sections/figure.njk" %}
+    {% elif section.type === 'figure' %}
+      {% include "sections/figure.njk" %}
 
-      {% endif %}
-  {% endfor %}
-</main>
+    {% endif %}
+{% endfor %}

@@ -1,24 +1,38 @@
 footer {
-	padding: 0;
+	max-width: var(--const-max);
+	margin-inline: auto;
+	padding: var(--scale-2) 0;
 	line-height: 1.1;
 
 	.vitals, .bottom {
-		padding: var(--space-0);
+		padding: var(--const-0);
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-1);
+		gap: var(--const-1);
 		justify-content: space-between;
 		align-items: flex-start;
 	}
 
 	/* NAV */
-	ul {
+	nav ul, nav ol {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	li {
+	.menu-item {
 		flex: 1 1 12rem;
-		padding: var(--space-0);
-		font-size: var(--size-1);
+		padding: var(--const-0);
+		font-size: var(--scale-2);
+	}
+	.outline {
+		font-size: var(--const-0);
+		gap: var(--const--3);
+		margin-top: var(--scale--2);
+	}
+	.outline li {
+		flex-basis: fit-content;
+		margin: 0;
+	}
+	li.mobile-menu-item {
+		display: none;
 	}
 }

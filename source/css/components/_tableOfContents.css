@@ -1,5 +1,5 @@
 .contents {
-	padding: var(--space-1);
+	padding: var(--const-1);
 	width: fit-content;
 	min-width: 30%;
 	max-width: 20rem;
@@ -7,14 +7,12 @@
 
 .outline {
 	line-height: 1;
-	list-style: none;
-	padding: 0;
 
 	li {
 		background: var(--accent);
 		color: var(--accentText);
 		width: 100%;
-		padding: 0.5em 0.8em 0.4em;
+		padding: 0.5em 0.4em 0.4em 0.8em;
 		border-radius: 0.5em;
 		display: flex;
 		margin: 0.2em 0;

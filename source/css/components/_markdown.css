@@ -1,21 +1,27 @@
 section { 
-	padding: var(--space-5) var(--space-0);
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--space-0);
-
-	h2 {
-		flex: 0 0 100%;
+	padding: var(--const-3) var(--scale-0);
+	
+	.section-body {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--scale-2) var(--scale-3);
 	}
 
 	.text {
-		flex: 2 1 15rem;
-		max-width: 35rem;
-	}
+		flex: 0 1 var(--const-11);
+/*		width: 100%;*/
+/*		max-width: var(--const-11);*/
+/*		display: inline-block;
+		margin-right: var(--scale-4);
+		margin-bottom: var(--scale-2);
+*/	}
 
 	aside {
-		font-size: var(--size--2);
-		flex: 1 0 10rem;
-		max-width: 30em;
+/*		display: inline-block;*/
+		font-size: var(--scale--2);
+		flex: 0 2 var(--const-9);
+/*		width: 100%;*/
+/*		max-width: var(--const-9);*/
+/*		vertical-align: top;*/
 	}
 }

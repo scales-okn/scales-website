@@ -1,3 +1,23 @@
+main {
+	position: relative;
+}
+main::before {
+	content: '';
+	background: var(--accent);
+/*	mask: url('/icons/dither3.png');*/
+	mask-mode: luminance;
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	image-rendering: pixelated;
+	mask-size: 6000px;
+}
+
 main > * {
-	
+	max-width: var(--const-max);
+	margin-inline: auto;
+	position: relative;
+}
+main > :not(.transparent) {
+	background: var(--ground);
 }

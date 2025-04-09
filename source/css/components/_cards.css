@@ -3,15 +3,17 @@
 	flex-wrap: wrap;
 	width: 100%;
 	max-width: 70rem;
+	font-family: var(--font-sans);
+	z-index: 1;
 
 	article {
 		flex: 1 1 0;
-		padding: var(--space-0);
-		padding-top: var(--space-3);
+		padding: var(--const-0);
+		padding-top: var(--const-3);
 		position: relative;
 		min-height: 8rem;
 		min-width: min(14rem, 100vw);
-		font-size: var(--size-2);
+		font-size: var(--scale-2);
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
@@ -34,13 +36,13 @@
 
 @media (min-width: 60rem) {
 	.cards {
-		padding-inline: var(--space-2);
-		padding-block: var(--space-1);
-		gap: var(--space-2);
+		padding-inline: var(--const-2);
+		padding-block: var(--const-1);
+		gap: var(--const-2);
 		flex-wrap: nowrap;
 
 		article {
-			padding-top: var(--space-1);
+			padding-top: var(--const-1);
 			height: 20rem;
 			overflow: hidden;
 			border-radius: 15px;
@@ -56,7 +58,7 @@
 		.cards {
 			padding-block: 0;
 			position: absolute;
-			translate: 0 -50%;
+			translate: max(0px, calc(50vw - var(--const-max) / 2)) -50%;
 		}
 		:is(section, figure):has(+ .cards) {
 			padding-bottom: 12rem;

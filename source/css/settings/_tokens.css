@@ -12,33 +12,44 @@ html {
 	--teal: #29d4c0;
 }
 
-/* SIZES */
 html {
-	font-size: clamp(1.1rem, 0.8rem + 0.7vw, 1.5rem);
-	/* --size-n: calc(calc(1rem * pow(1.2, n)) + n * 0.6vw)	*/
-	--size-5: calc(3.052rem + 3vw);
-	--size-4: calc(2.441rem + 2.4vw);
-	--size-3: calc(1.953rem + 1.8vw);
-	--size-2: calc(1.563rem + 1.2vw);
-	--size-1: calc(1.25rem + 0.6vw);
-	--size-0: 1rem;
-	--size--1: 0.8rem;
-	--size--2: 0.64rem;
-}
+	/* Sizes that Grow */
+	--scale-10: calc(var(--scale-0) * pow(1.4, 10));
+	--scale-6: calc(var(--scale-0) * pow(1.4, 6));
+	--scale-5: calc(var(--scale-0) * pow(1.4, 5));
+	--scale-4: calc(var(--scale-0) * pow(1.4, 4));
+	--scale-3: calc(var(--scale-0) * pow(1.4, 3));
+	--scale-2: calc(var(--scale-0) * pow(1.4, 2));
+	--scale-1: calc(var(--scale-0) * pow(1.4, 1));
+	--scale-0: clamp(1rem, 0.8rem + 0.8vw, 1.4rem);
+	--scale--1: calc(var(--scale-0) * pow(1.4, -1));
+	--scale--2: calc(var(--scale-0) * pow(1.4, -2));
 
-/* SPACING */
-html {
-	--space-5: 3.052rem;
-	--space-4: 2.441rem;
-	--space-3: 1.953rem;
-	--space-2: 1.563rem;
-	--space-1: 1.25rem;
-	--space-0: 1rem;
-	--space--1: 0.8rem;
-	--space--2: 0.64rem;
-	--space--3: 0.57rem;
-	--space--4: 0.48rem;
+	--scale-grow: clamp(5mm,7vw - 10mm,3cm);
 
-	--space-grow: clamp(5mm,7vw - 10mm,3cm);
-	--max-width: 1200px;
+	/* Sizes that Stay the Same */
+	--const-12: calc(1rem * pow(1.4, 12));
+	--const-11: calc(1rem * pow(1.4, 11));
+	--const-10: calc(1rem * pow(1.4, 10));
+	--const-9: calc(1rem * pow(1.4, 9));
+	--const-5: calc(1rem * pow(1.4, 5));
+	--const-4: calc(1rem * pow(1.4, 4));
+	--const-3: calc(1rem * pow(1.4, 3));
+	--const-2: calc(1rem * pow(1.4, 2));
+	--const-1: calc(1rem * pow(1.4, 1));
+	--const-0: 1rem;
+	--const--1: calc(1rem * pow(1.4, -1));
+	--const--2: calc(1rem * pow(1.4, -2));
+	--const--3: calc(1rem * pow(1.4, -3));
+	--const--4: calc(1rem * pow(1.4, -4));
+
+	--const-max: 75rem; /* approx equivalent to const-13 */
+
+	/* Font Stack */
+	--font-sans: "VG5000", sans-serif;
+	--font-serif: "Redaction", serif;
+	--font-serif-1: "Redaction 10", "Redaction", serif;
+	--font-serif-2: "Redaction 20", "Redaction", serif;
+	--font-serif-3: "Redaction 35", "Redaction", serif;
+	--font-serif-4: "Redaction 50", "Redaction", serif;
 }

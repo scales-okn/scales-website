@@ -1,5 +1,14 @@
 header {
 	height: auto;
-	min-height: max(80svh, 10rem);
-	padding: var(--space-5) var(--space-1);
+	min-height: var(--scale-10);
+	padding: var(--scale-5) var(--scale-0) var(--scale-0);
+	position: relative;
+
+	h1 {
+		position: relative;
+		max-width: var(--const-10);
+	}
+	main & {
+		background: none;
+	}
 }

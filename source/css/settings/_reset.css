@@ -9,10 +9,10 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  font-size: 100%;
 }
 body {
     min-height: 100vh;
-    line-height: 1.4;
 }
 body, h1, h2, h3, h4, p,
 figure, blockquote, ul, ol, dl, dd {
@@ -20,12 +20,11 @@ figure, blockquote, ul, ol, dl, dd {
 }
 h1, h2, h3, h4 {
     font-weight: normal;
-    line-height: 1.1;
 }
 a {
     color: currentColor;
 }
-ul[role="list"], ol[role="list"] {
+:is(ul, ol).reset {
     list-style: none;
     padding: 0;
 }

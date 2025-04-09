@@ -2,10 +2,13 @@ import markdownIt from "markdown-it";
 import Image from "@11ty/eleventy-img";
 import browserslist from "browserslist";
 import { bundle, browserslistToTargets } from "lightningcss";
+import htmlmin from "html-minifier-terser";
 import path from 'node:path';
 import fs from 'node:fs';
 
 export default function(eleventyConfig) {
+
+    const dev = (process.env.ELEVENTY_RUN_MODE === 'serve' || process.env.ELEVENTY_RUN_MODE === 'watch');
 
     /* ---
     * Files To Passthrough and Ignore
@@ -188,13 +191,33 @@ export default function(eleventyConfig) {
           return async () => {
             let { code, map } = await bundle({
               filename: inputPath,
-              minify: true,
-              sourceMap: false,
+              minify: !dev,
+              sourceMap: dev,
               targets,
             });
             return code;
           };
         },
+    });
+
+    eleventyConfig.addTransform("htmlmin", function (content) {
+        // Skip minifying html in dev mode
+        if (dev) return content;
+
+        if ((this.page.outputPath || "").endsWith(".html")) {
+            let minified = htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true,
+                sortAttributes: true,
+                minifyCSS: true, // this targets our style attributes in HTML
+            });
+
+            return minified;
+        }
+
+        // If not an HTML output, return content as-is
+        return content;
     });
 
     return {

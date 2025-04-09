@@ -75,13 +75,29 @@ export default function(eleventyConfig) {
     );
 
     /* ---
-    * Public Pages Collection
+    * Custom Collections
     */ 
     eleventyConfig.addCollection("public", function (collectionApi) {
         return collectionApi
             .getFilteredByGlob(["source/*.md", "source/pages/*.md"])
             .filter(item => item.data?.publishPage)
             .sort((i, j) => String(i.data.menuOrder).localeCompare(j.data.menuOrder));
+    });
+
+    eleventyConfig.addCollection("top", function (collectionApi) {
+        return collectionApi
+            .getFilteredByGlob("source/pages/*.md")
+            .sort((i, j) => String(i.data.menuOrder).localeCompare(j.data.menuOrder));
+    });
+
+    eleventyConfig.addCollection("articles", function (collectionApi) {
+        return collectionApi
+            .getFilteredByGlob("source/articles/*.md");
+    });
+
+    eleventyConfig.addCollection("people", function (collectionApi) {
+        return collectionApi
+            .getFilteredByGlob("source/articles/*.md");
     });
 
     /* ---

@@ -1,21 +1,24 @@
 {% from '../macros.njk' import colors %}
 
 <footer id="footer">
-    <div class="vitals">
+    <div class="easy-flex">
         <address>
             <div><strong>{{ site.title }}</strong></div>
             <div class="location">{{ site.address }} <br> {{ site.address_2 }}</div>
             <div class="contact">{{ site.email }}</div>
         </address>
+        <a href="#top">↑ Jump to Top</a>
+    </div>
+
+    <div class="easy-flex">
         <a href="/">Newsletter</a>
     </div>
 
     {% set navId = 'footer-menu' %}
     {% include './nav.njk' %}
 
-    <div class="bottom">
+    <div class="easy-flex">
         <a href="">Accessibility Statement</a>
-        <a href="#top">↑ Top</a>
     </div>
 
     {% if false %}

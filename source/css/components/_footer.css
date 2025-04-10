@@ -1,16 +1,21 @@
 footer {
 	max-width: var(--const-max);
 	margin-inline: auto;
-	padding: var(--scale-2) 0;
+	padding-bottom: var(--scale-3);
 	line-height: 1.1;
+	background: var(--accent);
+	color: var(--accentText);
+	position: relative;
+	z-index: 3;
+    font-size: var(--scale--1); 
+	
+	&:target {
+		scroll-margin-block: 0;
+	}
 
-	.vitals, .bottom {
-		padding: var(--const-0);
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--const-1);
-		justify-content: space-between;
-		align-items: flex-start;
+	[href="#top"] {
+		font-size: var(--scale-0);
+		font-family: var(--font-sans);
 	}
 
 	/* NAV */
@@ -34,5 +39,8 @@ footer {
 	}
 	li.mobile-menu-item {
 		display: none;
+	}
+	a[aria-current="page"]::before {
+		content: '→ ';
 	}
 }

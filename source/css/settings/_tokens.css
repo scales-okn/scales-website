@@ -25,7 +25,7 @@ html {
 	--scale--1: calc(var(--scale-0) * pow(1.4, -1));
 	--scale--2: calc(var(--scale-0) * pow(1.4, -2));
 
-	--scale-grow: clamp(5mm,7vw - 10mm,3cm);
+	--fast-0: clamp(1rem, 10vw - 1rem, 6rem);
 
 	/* Sizes that Stay the Same */
 	--const-12: calc(1rem * pow(1.4, 12));

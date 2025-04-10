@@ -30,3 +30,12 @@
         inset: 0;
     }
 }
+
+.easy-flex {
+    padding: var(--const-0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--const-1);
+    justify-content: space-between;
+    align-items: flex-start;
+}

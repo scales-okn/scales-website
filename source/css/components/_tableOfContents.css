@@ -1,8 +1,14 @@
 .contents {
-	padding: var(--const-1);
+/*	padding: var(--const-1);*/
 	width: fit-content;
-	min-width: 30%;
 	max-width: 20rem;
+/*	margin-right: max(0px, calc(50vw - var(--const-max) / 2));*/
+	margin-left: auto;
+	margin-top: var(--scale-4);
+
+	.outline li {
+		padding-right: 3em;
+	}
 }
 
 .outline {

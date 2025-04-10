@@ -4,10 +4,6 @@ layout: base.njk
 
 {% include "components/header.njk" %}
 
-{% if tableOfContents %}
-  {% include "components/tableOfContents.njk" %}
-{% endif %}
-
 {% for section in pageElements %}
     {% if section.type === 'markdown' %}
       {% include "sections/markdown.njk" %}

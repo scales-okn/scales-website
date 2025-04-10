@@ -4,7 +4,7 @@ excerpt: null
 publishPage: true
 tableOfContents: true
 menuOrder: 4
-groundColor: orange
+groundColor: pink
 accentColor: purple
 pageElements:
   - type: markdown

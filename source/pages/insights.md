@@ -5,7 +5,7 @@ publishPage: true
 tableOfContents: true
 menuOrder: 4
 groundColor: teal
-accentColor: purple
+accentColor: lime
 pageElements:
   - type: markdown
     heading: Living Reports

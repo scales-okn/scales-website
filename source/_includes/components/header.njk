@@ -1,3 +1,8 @@
-<header class="transparent">
+{% set ditherUrl = ['/icons/', groundColor, '-', accentColor, '.png' ] | join %}
+
+<header class="dither" style="background-image: url('{{ ditherUrl }}');">
     <h1>{{ displayHeading or name or title }}</h1>
+    {% if tableOfContents %}
+      {% include "./tableOfContents.njk" %}
+    {% endif %}
 </header>

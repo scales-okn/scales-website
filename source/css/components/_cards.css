@@ -23,9 +23,20 @@
 	}
 	article::after {
 		content: '→';
+		background: var(--accent);
+		color: var(--accentText);
+		border-radius: 15px;
+		padding: var(--const--2);
+		padding-bottom: var(--const--4);
 	}
 	a {
 		margin-top: auto;
+		text-decoration: none;
+		background: var(--accent);
+		color: var(--accentText);
+		border-radius: 15px;
+		padding: var(--const--2);
+		padding-bottom: var(--const--4);
 	}
 	a::after {
 		content: '';

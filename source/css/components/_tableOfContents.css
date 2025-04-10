@@ -4,7 +4,7 @@
 	max-width: 20rem;
 /*	margin-right: max(0px, calc(50vw - var(--const-max) / 2));*/
 	margin-left: auto;
-	margin-top: var(--scale-4);
+	color: var(--accentText);
 
 	.outline li {
 		padding-right: 3em;

@@ -1,0 +1,5 @@
+.dither {
+	image-rendering: pixelated;
+	background: no-repeat top/cover url('/icons/pink-navy.png');
+	background-color: var(--ground, var(--white));
+}

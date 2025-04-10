@@ -5,7 +5,7 @@ publishPage: true
 tableOfContents: true
 menuOrder: 2
 groundColor: yellow
-accentColor: purple
+accentColor: orange
 pageElements:
   - type: markdown
     heading: Team

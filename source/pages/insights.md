@@ -4,8 +4,8 @@ excerpt: null
 publishPage: true
 tableOfContents: true
 menuOrder: 4
-groundColor: teal
-accentColor: lime
+groundColor: navy
+accentColor: teal
 pageElements:
   - type: markdown
     heading: Living Reports

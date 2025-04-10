@@ -4,8 +4,8 @@ excerpt: null
 publishPage: true
 tableOfContents: true
 menuOrder: 3
-groundColor: lime
-accentColor: forest
+groundColor: purple
+accentColor: pink
 pageElements:
   - type: markdown
     heading: Data Platform

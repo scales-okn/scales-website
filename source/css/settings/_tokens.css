@@ -5,7 +5,7 @@ html {
 	--lime: #b7df3e;
 	--orange: #ff7000;
 	--forest: #25740c;
-	--navy: #273c53;
+	--navy: #284666;
 	--pink: #eb84c9;
 	--purple: #4a243f;
 	--brown: #35190e;
@@ -30,6 +30,7 @@ html {
 	--fast--1: clamp(2.744rem, 10vw - 1rem, 5.378rem);
 
 	/* Sizes that Stay the Same */
+	--const-12: calc(1rem * pow(1.4, 13));
 	--const-12: calc(1rem * pow(1.4, 12));
 	--const-11: calc(1rem * pow(1.4, 11));
 	--const-10: calc(1rem * pow(1.4, 10));

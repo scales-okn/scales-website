@@ -21,7 +21,7 @@
 
 {% macro outline(pageElements, id, url) %}
 	{% if pageElements %}
-	<ol class="outline reset" id="{{ id }}">
+	<ol class="outline reset flow" id="{{ id }}">
 		{% for element in pageElements %}
 			{% set heading = element.heading %}
 			{% set href = [url, "#", heading | slugify] | join %}

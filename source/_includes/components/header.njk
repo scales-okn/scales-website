@@ -1,7 +1,9 @@
-{% set ditherUrl = ['/icons/', groundColor, '-', accentColor, '.png' ] | join %}
+{% set ditherUrl = ['/icons/', accentColor, '.png' ] | join %}
+{% set text = displayHeading or name or title %}
+{% set long = (text | length) > 20 %}
 
-<header class="dither" style="background-image: url('{{ ditherUrl }}');">
-    <h1>{{ displayHeading or name or title }}</h1>
+<header class="dither {% if long %} long {% endif %}" style="background-image: url('{{ ditherUrl }}');">
+    <h1>{{ text }}</h1>
     {% if tableOfContents %}
       {% include "./tableOfContents.njk" %}
     {% endif %}

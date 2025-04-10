@@ -3,7 +3,7 @@
 <div class="cards transparent" data-count="{{ section.cards | length }}">
 	{% for card in section.cards %}
 		{% set page = collections.all | telepage(card.title) %}
-		{% set ditherUrl = ['/icons/', page.data.groundColor, '.png'] | join %}
+		{% set ditherUrl = ['/icons/', page.data.accentColor, '.png'] | join %}
 		<article class="dither" style="{{ colors(page.data.groundColor, page.data.accentColor) }};background-image:url('{{ ditherUrl }}');">
 			<a href="{{ page.page.url }}">{{ card.text | truncate(28) }}</a>
 		</article>

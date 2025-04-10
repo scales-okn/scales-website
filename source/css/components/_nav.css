@@ -37,6 +37,20 @@ nav {
 
 	.menu-item:has([aria-current]) {
 		border-color: var(--accent);
+		background: var(--ground);
+		color: var(--text);
+
+		li {
+			background: var(--accent);
+			color: var(--accentText);
+			&::before {
+				background: var(--ground);
+				border-color: var(--ground);
+			}
+			&:hover::before, &:focus-within::before {
+				border-color: var(--white);
+			}
+		}
 	}
 
 	.menu-item:not(.mobile-menu-item) {

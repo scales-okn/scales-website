@@ -4,8 +4,8 @@ excerpt: null
 publishPage: true
 tableOfContents: true
 menuOrder: 4
-groundColor: pink
-accentColor: purple
+groundColor: forest
+accentColor: lime
 pageElements:
   - type: markdown
     heading: Donate

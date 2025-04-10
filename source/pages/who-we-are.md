@@ -4,8 +4,8 @@ excerpt: null
 publishPage: true
 tableOfContents: true
 menuOrder: 2
-groundColor: yellow
-accentColor: orange
+groundColor: brown
+accentColor: yellow
 pageElements:
   - type: markdown
     heading: Team

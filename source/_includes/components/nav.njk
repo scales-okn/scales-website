@@ -15,7 +15,7 @@
             {% set style = colors(data.groundColor, data.accentColor) %}
             {% set id = [slug, "-submenu"] | join %}
 
-            <li class="colorize menu-item reset full-link" style="{{ style }}">
+            <li class="colorize-accent menu-item reset full-link" style="{{ style }}">
                 {# <button id="{{ title }}-button" type="button" aria-expanded="false" aria-controls="{{ slug }}-submenu"></button> #}
                 <a href="{{ url }}" {% if url === this.url %} aria-current="page" {% endif %}>
                     {{ title }}
@@ -23,9 +23,9 @@
                 {{ outline(elements, id, url) }}
             </li>
         {% endfor %}
-        <li class="colorize menu-item" style="--ground:var(--white);--text:var(--black);--accent:var(--black);--accentText:var(--white);">
+        <li class="colorize-accent menu-item" style="--ground:var(--black);--text:var(--white);--accent:var(--white);--accentText:var(--black);">
             <span>Settings</span>
-            <ul class="outline reset">
+            <ul class="outline reset flow">
                 <li>Contrast</li>
                 <li>Text Size</li>
                 <li>Animations</li>

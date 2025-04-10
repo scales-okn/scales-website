@@ -1,6 +1,6 @@
 main {
 	position: relative;
-	background: linear-gradient(170deg, var(--accent) 0, var(--ground) 100vw);
+	background: var(--ground);
 }
 main > * {
 	max-width: var(--const-max);

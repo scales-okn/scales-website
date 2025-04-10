@@ -8,3 +8,8 @@ body, section, article, figure, .colorize {
 	background: var(--ground);
 	color: var(--text);
 }
+
+.colorize-accent {
+	background: var(--accent);
+	color: var(--accentText);
+}

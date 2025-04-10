@@ -7,8 +7,10 @@ nav {
 	width: 100%;
 	z-index: 2;
 	line-height: 1;
-	background: var(--accent);
-	color: var(--accentText);
+
+	a {
+		text-decoration: none;
+	}
 
 	& > ul {
 		max-width: var(--const-max);
@@ -17,9 +19,24 @@ nav {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-start;
-		gap: var(--const-0);
-		padding: var(--const-0) var(--const-0) var(--const--2);
+		gap: var(--const--4);
+		padding: var(--const--4);
 		list-style: none;
+	}
+
+	.menu-item {
+		padding: var(--scale--2);
+		border-radius: 15px;
+		border: 2px solid #fff0;
+		height: var(--scale-2);
+		flex: 0 0 max-content;
+	}
+	.menu-item:hover, .menu-item:focus-within {
+		border-color: var(--white);
+	}
+
+	.menu-item:has([aria-current]) {
+		border-color: var(--accent);
 	}
 
 	.menu-item:not(.mobile-menu-item) {
@@ -28,68 +45,31 @@ nav {
 }
 @media (min-width: 60rem) {
 	#top-menu {
-		background: none;
-		color: var(--text);
-/*		font-size: var(--scale-0);*/
-
 		& > ul {
 			justify-content: flex-start;
-			gap: var(--const--4);
-			padding: var(--const--4);
-		}
-		.menu-item:not(.mobile-menu-item) {
-			display: block;
-		}
-		.mobile-menu-item {
-			display: none;
-		}
-
-		button {
-			display: none;
-		}
-		a {
-			text-decoration: none;
 		}
 
 		.menu-item {
-			padding: var(--scale--2);
-			border-radius: 15px;
-	/*		clip-path: rect(0 100% 2.3rem 0 round 15px);*/
-	/*		transition: 1s clip-path ease 200ms, 300ms border-color 200ms;*/
 			transition: 500ms border-color ease, 500ms height ease 400ms;
 			interpolate-size: allow-keywords;
-			border: 2px solid #fff0;
-			height: var(--scale-2);
 			overflow: hidden;
 			flex: 1 1 max-content;
 		}
-
 		.menu-item:hover, .menu-item:focus-within {
-	/*		clip-path: rect(0 100% 100% 0 round 15px);*/
-			border-color: var(--white);
 			transition-delay: 0ms;
 			height: auto;
-		}
-
-		.menu-item:has([aria-current]) {
-			border-color: var(--accent);
 		}
 
 		.outline {
 			font-size: var(--scale--1);
 			margin-top: var(--const--2);
 		}
+
+		.menu-item:not(.mobile-menu-item) {
+			display: block;
+		}
+		.mobile-menu-item {
+			display: none;
+		}
 	}
 }
-
-/*@media (min-width: 60rem) {
-	#top-menu > ul {
-		gap: var(--const--2);
-		padding: var(--const--4) var(--const-0);
-		font-size: var(--scale-1);
-	}
-	#top-menu .menu-item {
-		height: 1.6em;
-		padding: var(--const--4) var(--const--3);
-	}
-}*/

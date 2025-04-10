@@ -4,7 +4,7 @@ body {
     line-height: 1.4;
 }
 h1 { 
-    font-size: var(--scale-4); 
+    font-size: var(--fast--1); 
     font-family: var(--font-serif-3);
 }
 h2 { 

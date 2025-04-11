@@ -9,7 +9,7 @@ header {
 		max-width: 12em;
 		margin-bottom: var(--scale-4);
 		display: inline-block;
-		background: var(--ground);
+/*		background: var(--ground);*/
 		color: var(--text);
 		border-radius: 15px;
 		padding: var(--const-0);

@@ -11,8 +11,8 @@ header {
 		display: inline-block;
 /*		background: var(--ground);*/
 		color: var(--text);
-		border-radius: 15px;
-		padding: var(--const-0);
+/* 		border-radius: 15px; */
+/* 		padding: var(--const-0); */
 		padding-bottom: var(--const--2);
 	}
 	&.long h1 {

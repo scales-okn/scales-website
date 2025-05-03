@@ -2,10 +2,19 @@
 
 <div class="cards transparent" data-count="{{ section.cards | length }}">
 	{% for card in section.cards %}
-		{% set page = collections.all | telepage(card.title) %}
-		{% set ditherUrl = ['/icons/', page.data.accentColor, '.png'] | join %}
-		<article class="dither" style="{{ colors(page.data.groundColor, page.data.accentColor) }};background-image:url('{{ ditherUrl }}');">
-			<a href="{{ page.page.url }}">{{ card.text | truncate(28) }}</a>
+		{% if (card.title) %}
+			{% set page = collections.all | telepage(card.title) %}
+			{% set url = page.page.url %}
+			{% set ditherUrl = ['/icons/', page.data.accentColor, '.png'] | join %}
+			{% set style = colors(page.data.groundColor, page.data.accentColor) %}
+		{% else %}
+			{% set url = card.url %}
+			{% set ditherUrl = ['/icons/', accentColor, '.png'] | join %}
+			{% set style = null %}
+		{% endif %}
+		
+		<article class="dither" style="{{ style }};background-image:url('{{ ditherUrl }}');">
+			<a href="{{ url }}">{{ card.text | truncate(28) }}</a>
 		</article>
 	{% endfor %}
 </div>

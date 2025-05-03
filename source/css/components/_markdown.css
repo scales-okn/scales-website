@@ -8,20 +8,40 @@ section {
 	}
 
 	.text {
-		flex: 0 1 var(--const-11);
-/*		width: 100%;*/
-/*		max-width: var(--const-11);*/
-/*		display: inline-block;
-		margin-right: var(--scale-4);
-		margin-bottom: var(--scale-2);
-*/	}
+		flex: 1 0 var(--const-10);
+		max-width: min(100%, var(--const-11));
+	}
 
 	aside {
-/*		display: inline-block;*/
 		font-size: var(--scale--2);
-		flex: 0 2 var(--const-9);
-/*		width: 100%;*/
-/*		max-width: var(--const-9);*/
-/*		vertical-align: top;*/
+		flex: 1 0 var(--const-5);
+		max-width: min(100%, var(--const-8));
+	}
+
+	aside img {
+		max-width: 60%;
+	}
+
+	a {
+		padding: .2ex .6ex;
+		border-radius: 0.5ex;
+		background: var(--accent);
+		color: var(--accentText);
+	}
+	a[target="_blank"]::after {
+		content: '↗';
+		font-family: var(--font-sans);
+		display: inline-block;
+		margin-left: 0.5em;
+		vertical-align: middle;
+		color: var(--ground);
+	}
+	a[href^="mailto"]::after {
+		content: '✉';
+		font-family: var(--font-sans);
+		display: inline-block;
+		margin-left: 0.5em;
+		vertical-align: middle;
+		color: var(--ground);
 	}
 }

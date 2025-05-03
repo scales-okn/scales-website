@@ -1,5 +1,8 @@
 .dither {
 	image-rendering: pixelated;
-	background: no-repeat top/cover url('/icons/pink-navy.png');
+	background: no-repeat center url('/icons/pink-navy.png');
+	background-size: max(1500px, 100%);
 	background-color: var(--ground, var(--white));
 }
+.dither:nth-of-type(3n+2) { background-position: bottom left; }
+.dither:nth-of-type(3n) { background-position: top right; }

@@ -42,10 +42,35 @@ export default function(eleventyConfig) {
         linkify: true
     };
     let markdownLib = new markdownIt(markdownOptions);
+    const defaultRenderer = function (tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+    };
 
     //Add div around tables
-    markdownLib.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n',
-    markdownLib.renderer.rules.table_close = () => '</table>\n</div>',
+    markdownLib.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n';
+    markdownLib.renderer.rules.table_close = () => '</table>\n</div>';
+
+    markdownLib.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+        const { attrs } = tokens[idx];
+        const href = attrs.find(([attr, value]) => attr === 'href')?.at(1)
+        if (href.includes('://') && !href.includes('scales-okn.org')) {
+            tokens[idx].attrSet('target', '_blank');
+        }
+        return defaultRenderer(tokens, idx, options, env, self);
+    };
+
+    markdownLib.renderer.rules.heading_open = (tokens, idx) => {
+        const { tag } = tokens[idx];
+        if (tag === 'h1') return '<h3>';
+        if (tag === 'h2') return '<h4>';
+        if (tag === 'h3') return '<h5>';
+    };
+    markdownLib.renderer.rules.heading_close = (tokens, idx) => {
+        const { tag } = tokens[idx];
+        if (tag === 'h1') return '</h3>';
+        if (tag === 'h2') return '</h4>';
+        if (tag === 'h3') return '</h5>';
+    };
 
     eleventyConfig.setLibrary("md", markdownLib);
 

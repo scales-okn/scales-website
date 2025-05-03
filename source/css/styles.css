@@ -11,6 +11,7 @@
 @import 'settings/_utilities.css';
 
 @import 'components/_cards.css';
+@import 'components/_figure.css';
 @import 'components/_footer.css';
 @import 'components/_header.css';
 @import 'components/_main.css';

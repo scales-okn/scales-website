@@ -1,0 +1,35 @@
+figure {
+	background-color: color-mix(in lch, var(--ground) 75%, var(--accent));
+	padding: var(--const-3) var(--fast-0);
+	gap: var(--scale-1) var(--scale-3);
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	picture {
+/*		flex: 1 0 60%;*/
+		flex: 1 0 var(--const-10);
+		max-width: min(100%, var(--const-11));
+	}
+	img {
+		max-height: 90lvh;
+		width: auto;
+/*		margin-inline: auto;*/
+	}
+}
+
+figcaption {
+/*	margin-inline: auto;
+	flex: 1 1 20%;
+	min-width: var(--const-8);
+	max-width: var(--const-10);*/
+	flex: 1 0 var(--const-8);
+	max-width: min(100%, var(--const-10));
+
+	font-family: var(--font-sans);
+	line-height: 1.2;
+	font-size: var(--scale--1);
+	padding: var(--const-0);
+	background: var(--ground);
+	border-radius: 0.5em;
+}

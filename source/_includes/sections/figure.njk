@@ -1,12 +1,12 @@
-{# {% from "../macros.njk" import colors %}
+{% from "../macros.njk" import colors %}
 
 <figure style="{{ colors(section.color) }}">
 	{% if section.imgSrc %}
-		<div class="placeholder"></div>
+		<img src="{{ section.imgSrc }}" alt="{{ section.alt }}">
 	{% elif section.vidSrc %}
 	{% endif %}
 
 	{% if section.caption %}
 		<figcaption>{{ section.caption }}</figcaption>
 	{% endif %}
-</figure> #}
+</figure>

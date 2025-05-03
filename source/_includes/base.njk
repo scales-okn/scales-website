@@ -1,12 +1,18 @@
 {% from 'macros.njk' import colors %}
 
+{% if page.url === '/' %}
+    {% set headTitle = site.title %}
+{% else %}
+    {% set headTitle = [title, ' | ', site.title] | join %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
-    <title>{{title}} | {{site.title}}</title>
+    <title>{{headTitle}}</title>
 
     {% if site.favicon %} {% favicon site.favicon %} {% endif %}
 

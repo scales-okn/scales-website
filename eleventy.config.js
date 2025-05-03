@@ -1,5 +1,5 @@
 import markdownIt from "markdown-it";
-import Image from "@11ty/eleventy-img";
+// import Image from "@11ty/eleventy-img";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import browserslist from "browserslist";
 import { bundle, browserslistToTargets } from "lightningcss";
@@ -33,6 +33,7 @@ export default function(eleventyConfig) {
     });
 
     eleventyConfig.addGlobalData("thisYear", () => new Date().getFullYear())
+
     /* ---
     * Markdown Rendering
     */ 
@@ -127,7 +128,8 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addCollection("people", function (collectionApi) {
         return collectionApi
-            .getFilteredByGlob("source/articles/*.md");
+            .getFilteredByGlob("source/people/*.md")
+            .sort((i, j) => String(i.data.name).localeCompare(j.data.name));
     });
 
     /* ---

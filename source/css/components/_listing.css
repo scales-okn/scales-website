@@ -11,21 +11,19 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		padding: var(--const--1);
-		gap: .5ex;
+		gap: var(--const--3);
 	}
 
-	a {
+	a, p {
 		width: max-content;
 		z-index: 1;
+		display: inline-block;
+		border-radius: 1ex;
+		padding: .4ex 1ex .2ex;
 	}
 	p {
 		font-style: italic;
-		display: inline-block;
-		z-index: 1;
-		width: max-content;
 		background: var(--ground);
-		border-radius: 0.5ex;
-		padding: .2ex .6ex;
 	}
 
 	img {

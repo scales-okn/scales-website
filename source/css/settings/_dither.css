@@ -6,3 +6,4 @@
 }
 .dither:nth-of-type(3n+2) { background-position: bottom left; }
 .dither:nth-of-type(3n) { background-position: top right; }
+figure.dither { background-position: 75% 25%; }

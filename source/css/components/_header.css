@@ -3,10 +3,12 @@ header {
 	min-height: var(--scale-6);
 	padding: var(--scale-5) var(--fast-0) var(--scale-0);
 	position: relative;
+	background-color: var(--ground);
+	--flow-space: .2em;
 /*	color: var(--white);*/
 
-	h1 {
-		max-width: 12em;
+	> h1, > hgroup {
+		max-width: calc(12 * var(--fast--1));
 		margin-bottom: var(--scale-4);
 /*		margin-left: calc(-1 * var(--const-0));*/
 		display: inline-block;
@@ -14,9 +16,30 @@ header {
 		color: var(--text);
 		border-radius: 15px;
 		padding: var(--const--1);
-		padding-bottom: var(--const--2);
+	    padding-bottom: var(--const--2);
 	}
 	&.long h1 {
 		background: none;
+	}
+
+	hgroup {
+		font-size: var(--scale-2);
+	    font-family: var(--font-sans);
+	    line-height: 1;
+	}
+
+	img {
+		height: var(--const-9);
+		width: auto;
+		position: relative;
+		z-index: 1;
+		border-radius: 15px;
+	}
+}
+
+@supports selector(:has(img)) {
+	header:has(img) + section {
+		margin-top: calc(-1 * var(--const-6));
+		padding-top: calc(var(--const-3) + var(--const-6));
 	}
 }

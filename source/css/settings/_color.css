@@ -2,7 +2,15 @@ body {
 	--ground: var(--black);
 	--text: var(--white);
 	--accent: var(--white);
-	--accentText: var(--white);
+	--accentText: var(--black);
+}
+body:has([value="more-contrast"]:checked) {
+	&, * {
+		--ground: var(--black) !important;
+		--text: var(--white) !important;
+		--accent: var(--white) !important;
+		--accentText: var(--black) !important;
+	}
 }
 body, section, article, figure, .colorize {
 	background: var(--ground);
@@ -11,6 +19,7 @@ body, section, article, figure, .colorize {
 
 section {
 	--pink: #f38dc2;
+	--orange: #ff9254;
 }
 section:nth-of-type(2n) {
 	background-color: color-mix(in lch, var(--ground) 85%, var(--accent));

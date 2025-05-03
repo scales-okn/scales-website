@@ -3,7 +3,13 @@ footer {
 	margin-inline: auto;
 	padding-bottom: var(--scale-3);
 	line-height: 1.1;
+	padding-top: 3rem;
 	background: var(--accent);
+	background: linear-gradient(to bottom, 
+		color-mix(in lch, var(--accent) 40%, transparent) 1rem,
+		color-mix(in lch, var(--accent) 60%, transparent) 1rem 2rem,
+		color-mix(in lch, var(--accent) 80%, transparent) 2rem 3rem,
+		var(--accent) 3rem);
 	color: var(--accentText);
 	position: relative;
 	z-index: 3;

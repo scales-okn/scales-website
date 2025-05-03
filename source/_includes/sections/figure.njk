@@ -1,12 +1,19 @@
 {% from "../macros.njk" import colors %}
 
-<figure style="{{ colors(section.color) }}">
+{% if not section.imgSrc and not section.vidSrc %}
+	{% set ditherUrl = ['/icons/', section.color or accentColor, '.png'] | join %}
+	{% set style = [colors(section.color), 'background-image:url(', ditherUrl, ');'] | join %}
+{% else %}
+	{% set style = colors(section.color) %}
+{% endif %}
+
+<figure style="{{ style }}" {% if ditherUrl %}class="dither no-img"{% endif %}>
 	{% if section.imgSrc %}
 		<img src="{{ section.imgSrc }}" alt="{{ section.alt }}">
 	{% elif section.vidSrc %}
 	{% endif %}
 
 	{% if section.caption %}
-		<figcaption>{{ section.caption }}</figcaption>
+		<figcaption>{{ section.caption | markdown | safe }}</figcaption>
 	{% endif %}
 </figure>

@@ -33,3 +33,15 @@ figcaption {
 	background: var(--ground);
 	border-radius: 0.5em;
 }
+
+figure.no-img {
+	background-color: transparent;
+}
+.no-img figcaption {
+	font-size: var(--fast--1);
+	font-family: var(--font-serif-3);
+	max-width: unset;
+	background-color: unset;
+	text-wrap: balance;
+	line-height: 1;
+}

@@ -38,6 +38,7 @@ html {
 	--const-10: calc(1rem * pow(1.4, 10));
 	--const-9: calc(1rem * pow(1.4, 9));
 	--const-8: calc(1rem * pow(1.4, 8));
+	--const-6: calc(1rem * pow(1.4, 6));
 	--const-5: calc(1rem * pow(1.4, 5));
 	--const-4: calc(1rem * pow(1.4, 4));
 	--const-3: calc(1rem * pow(1.4, 3));

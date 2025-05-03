@@ -23,14 +23,19 @@
                 {{ outline(elements, id, url) }}
             </li>
         {% endfor %}
-        <li class="colorize-accent menu-item" style="--ground:var(--black);--text:var(--white);--accent:var(--white);--accentText:var(--black);">
+        {#<li class="colorize-accent menu-item" style="--ground:var(--black);--text:var(--white);--accent:var(--white);--accentText:var(--black);">
             <span>Settings</span>
             <ul class="outline reset flow">
-                <li>Contrast</li>
+                <li>
+                    <label for="more-contrast-{{navId}}">
+                        <input id="more-contrast-{{navId}}" type="checkbox" value="more-contrast">
+                        Increased Contrast
+                    </label>
+                </li>
                 <li>Text Size</li>
                 <li>Animations</li>
             </ul>
-        </li>
+        </li>#}
         <li class="colorize-accent full-link mobile-menu-item menu-item">
             <a href="/">SCALES</a>
         </li>

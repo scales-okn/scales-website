@@ -73,15 +73,15 @@
 	}
 
 	@supports selector(:has(+ .cards)) {
-		.cards {
+		.cards:not(:last-child) {
 			padding-block: 0;
 			position: absolute;
 			translate: max(0px, calc(50vw - var(--const-max) / 2)) -66%;
 		}
-		:is(section, figure):has(+ .cards) {
+		:is(section, figure):has(+ .cards:not(:last-child)) {
 			padding-bottom: 16rem;
 		}
-		.cards + * {
+		.cards:not(:last-child) + * {
 			padding-top: 10rem;
 		}
 	}

@@ -7,7 +7,31 @@ header {
 	--flow-space: .2em;
 /*	color: var(--white);*/
 
-	> h1, > hgroup {
+	.navgroup {
+		background: var(--accent);
+		border-radius: 15px;
+		color: var(--accentText);
+		font-size: var(--scale-0);
+	    font-family: var(--font-sans);
+	    line-height: 1;
+	    margin-bottom: var(--scale-4);
+	    display: inline-block;
+
+		a {
+			display: block;
+			padding: var(--const--1) var(--const-1) var(--const--3);
+
+			&::before {
+				content: '⬅ ';
+			}
+		}
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	h1 {
 		max-width: calc(12 * var(--fast--1));
 		margin-bottom: var(--scale-4);
 /*		margin-left: calc(-1 * var(--const-0));*/
@@ -21,11 +45,6 @@ header {
 		background: none;
 	}
 
-	hgroup {
-		font-size: var(--scale-2);
-	    font-family: var(--font-sans);
-	    line-height: 1;
-	}
 
 	img {
 		height: var(--const-9);

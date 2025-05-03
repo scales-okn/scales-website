@@ -16,7 +16,7 @@ footer {
     font-size: var(--scale--1); 
 	
 	&:target {
-		scroll-margin-block: 0;
+		scroll-margin-block: -3rem;
 	}
 
 	[href="#top"] {

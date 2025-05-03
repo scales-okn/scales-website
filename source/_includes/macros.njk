@@ -9,7 +9,7 @@
 		--ground: var(--{{ ground }}); 
 		--text: var(--{{ text }});
 	{% endif %}
-	{% if accent %}
+	{% if accent and accent !== ground %}
 		{% if accent in darkColors %}
 			{% set accentText = ground %}
 		{% else %}

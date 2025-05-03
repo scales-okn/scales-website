@@ -15,8 +15,7 @@ header {
 		background: var(--ground);
 		color: var(--text);
 		border-radius: 15px;
-		padding: var(--const--1);
-	    padding-bottom: var(--const--2);
+		padding: var(--const-0) var(--const-1) var(--const--2);
 	}
 	&.long h1 {
 		background: none;

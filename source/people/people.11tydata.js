@@ -5,7 +5,14 @@ export default {
     eleventyComputed: {
       title: data => data.name,
       layout: data => data.layout || "person.njk",
-      groundColor: ({name}) => colors[(name.codePointAt(Math.floor(name.length / 2))) % colors.length],
-      accentColor: ({name}) => colors[((name.codePointAt(Math.floor(name.length / 2)) % colors.length) + name.codePointAt(Math.floor(name.length / 3))) % colors.length]
+      groundColor: ({name}) => colors[(
+        name.codePointAt(Math.floor(name.length / 2))
+        ) % colors.length],
+      accentColor: ({name}) => colors[(
+        name.codePointAt(Math.floor(name.length / 2)) 
+        + (
+          name.codePointAt(Math.floor(name.length / 3)) % (colors.length - 1)
+          ) + 1
+        ) % colors.length]
     }
 };

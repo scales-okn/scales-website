@@ -2,7 +2,7 @@
 {% set navId = navId or "top-menu" %}
 
 <nav id="{{ navId }}">
-{% set pages = collections.top %}
+{% set pages = collections.public %}
 {% if pages %}
     <ul class="reset">
         {% set this = page %}

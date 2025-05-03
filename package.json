@@ -3,10 +3,11 @@
   "description": "a site for SCALES-OKN",
   "url": "https://scales-okn.org",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
+    "build": "npm run clean; npx @11ty/eleventy",
+    "serve": "npm run clean; npx @11ty/eleventy --serve",
     "start": "npm run serve",
-    "dev": "npm run serve"
+    "dev": "npm run serve",
+    "clean": "rm -r ./_site"
   },
   "engines": {
     "node": ">=18",

@@ -14,5 +14,8 @@ layout: base.njk
     {% elif section.type === 'figure' %}
       {% include "sections/figure.njk" %}
 
+    {% elif section.type === 'listing' %}
+      {% include "sections/listing.njk" %}
+
     {% endif %}
 {% endfor %}

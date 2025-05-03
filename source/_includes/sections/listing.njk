@@ -1,0 +1,13 @@
+{% set items = collections[section.collection] %}
+
+<section id="{{ section.heading | slugify }}">
+	<h2>{{ section.heading }}</h2>
+
+	<ul class="listing">
+		{% for item in items %}
+		{% if item.data[section.filter | first] === section.filter | last %}
+			<li><a href="{{ item.url }}">{{ item.data.name }}</a></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+</section>

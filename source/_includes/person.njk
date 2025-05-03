@@ -1,5 +1,22 @@
 ---
 layout: base.njk
 ---
+{% from "macros.njk" import colors %}
+
+{% if picture %}
+	{% set headerImage = picture %}
+	{% set headerAlt = headerAlt or ["headshot of ", name] | join %}
+{% endif %}
 
 {% include "components/header.njk" %}
+
+
+<section class="section-body" style="{{ colors(groundColor, accentColor) }}">
+	<h2>{{ jobTitle }}</h2>
+
+	{% if bio %}
+		<div class="text flow">
+		{{ bio | markdown | safe }}
+		</div>
+	{% endif %}
+</section>

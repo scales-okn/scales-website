@@ -1,11 +1,13 @@
 ---
 name: Kat Albrecht
 role: team
-jobTitle: >- 
-  Assistant Professor of Criminal Justice & Criminology
-  Andrew Young School of Policy Studies
-  Georgia State University
-picture:
-bio: >-
-  Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+jobTitle: Executive Director
+picture: /media/kat.jpg
+bio: |
+  Kat Albrecht joined the SCALES team in 2021, assuming the role of Executive Director in 2025. Her work spans data infrastructure development and public-facing data utility, where she focuses on practical strategies for bringing high quality data into courts. 
+
+  She is a professor at Truman State University where she directs the Fear and Computational Law Lab and teaches classes in criminology and criminal law. Kat is also the North American Director of the Summer Institutes in Computational Social Science, bringing free and open-source computational methods training to interdisciplinary social scientists across the country. She holds a JD and PhD from Northwestern University.
+
+  Importantly, she is also a horror B-movie aficionado and film reviewer, specializing in practical special effects and creature features.
+
 ---

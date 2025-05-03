@@ -7,14 +7,14 @@ menuOrder: 2
 groundColor: stone
 accentColor: yellow
 pageElements:
-  - type: markdown
-    heading: Team
-    body: >-
-      [photos and bios in progress]
-  - type: markdown
+  - type: listing
+    collection: people
+    heading: Staff
+    filter: ["role", "team"]
+  - type: listing
+    collection: people
     heading: Board
-    body: >-
-      [photos and bios in progress]
+    filter: ["role", "board"]
   - type: markdown
     heading: Documents
     body: >-

@@ -13,5 +13,7 @@ pageElements:
       SCALES brought together researchers and practitioners from across the United States   to reimagine what’s possible when using enriched and open data to tackle challenges in  criminal justice reform, access to justice, and civil litigation efficiency. Check out the research that came from the symposium: 
 
       [Northwestern Law Review](https://northwesternlawreview.org/issues/?vol=vol%20119%20-%20issue%201)
+  - type: figure
+    caption: '“We hope that this Issue advances a continuing conversation about how data can ensure access to justice.”'
       
 ---

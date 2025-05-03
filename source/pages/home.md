@@ -11,7 +11,7 @@ pageElements:
   - type: markdown
     heading: Why SCALES Matters
     body: |
-      Court opacity – keeping data behind an expensive paywall and behind unusable platforms – makes the system less efficient, fair, and accurate. The work we do to increase transparency and data access aims to solve these problems.
+      Court opacity – keeping data behind an expensive paywall and behind unusable platforms – makes the system less efficient, fair, and accurate. The work we do to *increase transparency and data access* aims to solve these problems.
 
       SCALES improves court transparency by providing enriched data for the public, policymakers, researchers, and legal professionals.
 
@@ -44,7 +44,7 @@ pageElements:
       - title: What We Do
         text: Start Exploring
   - type: figure
-    color: pink
-    caption: The vast majority of federal litigation is dark matter
+    color: navy
+    caption: The *vast majority* of federal litigation is **dark matter**
   
 ---

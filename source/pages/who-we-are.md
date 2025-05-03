@@ -4,36 +4,25 @@ excerpt: null
 publishPage: true
 tableOfContents: true
 menuOrder: 2
-groundColor: brown
+groundColor: stone
 accentColor: yellow
 pageElements:
   - type: markdown
     heading: Team
     body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
+      [photos and bios in progress]
   - type: markdown
     heading: Board
     body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
-    aside: >-
-      1. Alexander CS, Dahlberg N, Tucker AM. (2024) Settlement as Construct: Defining and Counting Party Resolution in Federal District Court. Northwestern University Law Review 119 (1), 65-108.
-      
-      2. Schwartz DL, Albrecht KM, Pah AR, Cotropia CA, Sanders AK, Sanga S, Alexander CS, Amaral LAN, Clopton ZD, Tucker AM, Gaylord TW, Daniel SG, Dahlberg N. (2024) The SCALES Project: Making Federal Court Records Free. Northwestern University Law Review 119 (1), 23-64.
-      
-      3. Schwartz DL, Albrecht KM. (2024) Foreword. Northwestern University Law Review 119 (1), 1-4.
-      
-      4. Sanders AK. (2024) Adding Some Bite to Their Bark: Using AI to Transform the Way the Press Covers the Judiciary. Communications Lawyer 39 (1), 21-30
-  - type: markdown
-    heading: Partners
-    body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
+      [photos and bios in progress]
   - type: markdown
     heading: Documents
     body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
+      [link to form 990]
   - type: markdown
     heading: History
     body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
+      SCALES originated from a project called the Northwestern Open Access to Court Record Initiative (NOACRI) in 2018. Supported by grants like the National Science Foundation Convergence Accelerator and the National Science Foundation Proto-Open Knowledge Networks, NOACRI expanded into the SCALES project in 2020. SCALES, Systematic Content Analysis of Litigation EventS, has continued to engage with researchers, practitioners, and policymakers to develop software and database tools to help enrich court data and make it publicly accessible and easily analyzable. The SCALES OKN was incorporated as a full-fledged non-profit in 2025, so we can take years of research and engineering work and put it to use in advancing our mission of court data transparency.
+
   
 ---

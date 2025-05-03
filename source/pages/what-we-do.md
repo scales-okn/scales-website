@@ -9,32 +9,32 @@ accentColor: pink
 pageElements:
   - type: markdown
     heading: Data Platform
-    color: navy
     body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
+      The SCALES Data Explorer is a tool that provides you direct access to our   enriched data   that is ready for you to use. The data explorer currently holds all of our federal data, including data from all 94 U.S. District Courts. Our next project  focuses on local-level criminal court data, which will be added to the same data explorer with the same easy-to-use functionality allowing you to produce graphs, charts, and case subsets to download.
   - type: markdown
     heading: How To
-    color: teal
-    body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
-    aside: >-
-      ### Publications
-      
-      1. Alexander CS, Dahlberg N, Tucker AM. (2024) *Settlement as Construct: Defining and Counting Party Resolution in Federal District Court*. Northwestern University Law Review 119 (1), 65-108.
-      
-      2. Schwartz DL, Albrecht KM, Pah AR, Cotropia CA, Sanders AK, Sanga S, Alexander CS, Amaral LAN, Clopton ZD, Tucker AM, Gaylord TW, Daniel SG, Dahlberg N. (2024) *The SCALES Project: Making Federal Court Records Free*. Northwestern University Law Review 119 (1), 23-64.
-      
-      3. Schwartz DL, Albrecht KM. (2024) *Foreword*. Northwestern University Law Review 119 (1), 1-4.
-      
-      4. Sanders AK. (2024) *Adding Some Bite to Their Bark: Using AI to Transform the Way the Press Covers the Judiciary*. Communications Lawyer 39 (1), 21-30
+    body: >-    
+      To use the SCALES Data Explorer, just follow the link below where you will be   prompted to sign in or sign up with a free account using any valid email address. This will allow  you to access the data explorer, where all our SCALES data holdings are integrated into an easy-to-use data tool where you can save your work and analysis that you run. If you want to know more about SCALES software or tools, you can check out our full documentation.
+  - type: cards
+    cards:
+      - url: https://dataexplorer.scales-okn.org/
+        text: Data Explorer
+      - url: https://docs.scales-okn.org/
+        text: Documentation
   - type: markdown
     heading: Showcase
-    color: lime
-    body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
+    body: |
+      SCALES data can help show whether litigants are getting outcomes in court   depending on where they are assigned. The graph below shows that the judge you get matters a lot, with some judges more likely than others to deny litigants the ability to proceed in cases where they can’t afford to pay court fees to initiate a case:
+    aside: |
+      See our essay in *Science*, ["How to build a more open justice system"](https://par.nsf.gov/servlets/purl/10170352)
+    
+      ![](/media/how_to_build2020.jpg)
+  - type: figure
+    imgSrc: /media/judge_waives_fees.png
+    caption: A figure depicting the likelihood that a judge waives court fees minus the likelihood that other judges in the same district waives fees. The line on the graph indicates that there’s a significant difference in judge behavior, even in the same district.
   - type: markdown
     heading: Explore
     body: >-
-      Currently most of the workings of the federal judiciary, whether that be how judges differ in managing cases, how plaintiffs and defendants maneuver in run-of-the-mill lawsuits, or how cases involving corporations differ from those with individuals, are hidden from the public and researchers. This isn’t because data about the workings of the court is unavailable. It’s because the data is locked behind a paywall with an interface that prevents users from assessing systematic patterns about court activity.
+      The [SCALES Data Explorer](https://dataexplorer.scales-okn.org/) can answer many types of questions. For example, it can provide insight into: the distribution of federal criminal prosecutions of   immigration or firearm trafficking across U.S. courts; how judges in the same   jurisdictions make decisions differently; quantifying the burdens of different  experiences of court costs and fee waivers for self-represented litigants compared to represented litigants; and analyzing how actors such as corporations recur and reappear across different types of cases. Give it a try!
   
 ---

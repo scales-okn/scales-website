@@ -1,5 +1,6 @@
 import markdownIt from "markdown-it";
 import Image from "@11ty/eleventy-img";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import browserslist from "browserslist";
 import { bundle, browserslistToTargets } from "lightningcss";
 import htmlmin from "html-minifier-terser";
@@ -31,6 +32,7 @@ export default function(eleventyConfig) {
         };
     });
 
+    eleventyConfig.addGlobalData("thisYear", () => new Date().getFullYear())
     /* ---
     * Markdown Rendering
     */ 
@@ -109,6 +111,7 @@ export default function(eleventyConfig) {
     * This is an async shortcode, so it can't be used in a njk macro
     * or normal loop, but does work in an asyncAll or asyncEach loop
     */ 
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
     eleventyConfig.addShortcode("image", async function (src, alt, classes, sizes, lazy=true) {
         let metadata = await Image(src, {
             widths: [600, 1200, 2000],

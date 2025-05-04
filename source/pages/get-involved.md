@@ -3,7 +3,7 @@ title: Get Involved
 excerpt: null
 publishPage: true
 tableOfContents: true
-menuOrder: 4
+menuOrder: 5
 groundColor: forest
 accentColor: lime
 pageElements:

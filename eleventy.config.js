@@ -19,19 +19,6 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("source/admin");
     eleventyConfig.addPassthroughCopy("source/robots.txt");
 
-    // Skip building unpublished pages except during watch/serve
-    // https://www.11ty.dev/docs/quicktips/draft-posts/
-    eleventyConfig.addGlobalData("eleventyComputed.permalink", function () {
-        return (data) => {
-            if (data.layout === "page.njk" 
-                    && !data.publishPage 
-                    && process.env.ELEVENTY_RUN_MODE === 'build') {
-                return false;
-            }
-            return data.permalink;
-        };
-    });
-
     eleventyConfig.addGlobalData("thisYear", () => new Date().getFullYear())
 
     /* ---

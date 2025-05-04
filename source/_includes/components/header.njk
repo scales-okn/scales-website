@@ -5,13 +5,13 @@
 
 <header class="dither {% if long %} long {% endif %}" style="background-image: url('{{ ditherUrl }}');">
     
-    {% if 'people' in page.url %}
+    {% if layout === 'person.njk' %}
     <div class="navgroup">
       <a href="/who-we-are">Who We Are</a>
-      {% endif %}
       <h1>{{ text }}</h1>
-      {% if 'people' in page.url %}
     </div>
+    {% else %}
+      <h1>{{ text }}</h1>
     {% endif %}
 
     {% if tableOfContents %}

@@ -1,19 +1,20 @@
 ---
 title: SCALES
-displayHeading: Transforming the Transparency of the Courts
+displayHeading: Welcome to SCALES
 excerpt: null
 publishPage: true
 tableOfContents: false
 menuOrder: 1
 groundColor: purple
 accentColor: orange
+dither: scales
 pageElements:
   - type: markdown
     heading: Why SCALES Matters
     body: |
       Court opacity – keeping data behind an expensive paywall and behind unusable platforms – makes the system less efficient, fair, and accurate. The work we do to *increase transparency and data access* aims to solve these problems.
 
-      SCALES improves court transparency by providing enriched data for the public, policymakers, researchers, and legal professionals.
+      **SCALES improves court transparency by providing enriched data for the public, policymakers, researchers, and legal professionals.**
 
       Our core values are transparency, fairness, efficiency, and accuracy of the courts. We believe that every person has a right to see, understand, and use meaningful and accessible court data and that court data without enrichment and accessibility is neither sufficiently transparent nor public. We aim to build and use our data platforms to ensure the fairness, efficiency, and accuracy of the courts.
   - type: markdown
@@ -45,6 +46,6 @@ pageElements:
         text: Start Exploring
   - type: figure
     color: navy
-    caption: The *vast majority* of federal litigation is **dark matter**
+    caption: The *vast majority* of litigation is **dark matter**
   
 ---

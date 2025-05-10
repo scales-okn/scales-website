@@ -4,10 +4,16 @@
     <div class="easy-flex">
         <address>
             <div><strong>{{ site.title }}</strong></div>
-            <div class="location">{{ site.address }} <br> {{ site.address_2 }}</div>
-            <div class="contact">{{ site.email }}</div>
+            <div class="location">
+                {% if site.address %} {{ site.address }} <br> {% endif %}
+                {% if site.address_2 %} {{ site.address_2 }} {% endif %}
+            </div>
+            <div class="contact"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
         </address>
         <a href="#top">↑ Jump to Top</a>
+        {% if site.mission %}
+            <p>{{ site.mission }}</p>
+        {% endif %}
     </div>
 
     <div class="easy-flex">

@@ -5,14 +5,16 @@
       "url": "/"
     }
   ],
+  "mission": "SCALES improves court transparency by providing enriched data for the public, policymakers, researchers, and legal professionals.",
   "homeSlug": "home",
+  "logo": "/icons/white-logo.svg",
   "url": "https://scales-okn.org/",
   "construction": false,
-  "favicon": "",
+  "favicon": "/icons/favicon.ico",
   "title": "SCALES-OKN",
   "language": "en",
   "description": "SCALES-OKN is transforming the transparency and accountability of the federal judiciary",
-  "address": "123 court st",
-  "address_2": "chicago il 60600",
+  "address": false,
+  "address_2": false,
   "email": "info@scales-okn.org"
 }

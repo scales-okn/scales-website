@@ -14,13 +14,13 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <title>{{headTitle}}</title>
 
-    {% if site.favicon %} {% favicon site.favicon %} {% endif %}
+    <link rel="icon" href="icons/favicon.ico" sizes="25x25">
 
     <link rel="stylesheet" href="/css/styles.css">
 
     {% include "components/meta.njk" %}
 </head>
-<body id="top" class="{{ layout | noext }}" style="{{ colors(groundColor, accentColor) }}">
+<body id="top" class="{{ layout | noext }} {{ page.fileSlug }}" style="{{ colors(groundColor, accentColor) }}">
     <a href="#skip" class="skip-link">Skip to main content</a>
     {% include "components/nav.njk" %}
     <main id="skip" tabindex="-1">

@@ -25,7 +25,7 @@ nav {
 	}
 
 	.menu-item {
-		padding: var(--scale--2);
+		padding: 0.5em;
 		border-radius: 15px;
 		border: 2px solid #fff0;
 		height: var(--scale-2);

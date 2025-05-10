@@ -19,6 +19,12 @@ footer {
 		scroll-margin-block: -3rem;
 	}
 
+	p {
+		padding-inline: var(--const-0);
+		max-width: 30em;
+		hyphens: none;
+	}
+
 	[href="#top"] {
 		font-size: var(--scale-0);
 		font-family: var(--font-sans);

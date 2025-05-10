@@ -13,7 +13,7 @@ section {
 	}
 
 	aside {
-		font-size: var(--scale--2);
+		font-size: var(--scale--1);
 		flex: 1 0 var(--const-5);
 		max-width: min(100%, var(--const-8));
 	}

@@ -10,11 +10,15 @@ pageElements:
   - type: listing
     collection: people
     heading: Staff
-    filter: ["role", "team"]
+    items: [kat, kaitlyn, luis, scott, danny, shelleen]
   - type: listing
     collection: people
     heading: Board
-    filter: ["role", "board"]
+    items: [chris, david, amy, adam, charlotte]
+  - type: short_listing
+    collection: people
+    heading: Alumni
+    items: [anoosha]
   - type: markdown
     heading: Documents
     body: >-

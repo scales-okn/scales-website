@@ -1,17 +1,18 @@
-{% set items = collections[section.collection] %}
+{% set pool = collections[section.collection] %}
 
 <section id="{{ section.heading | slugify }}">
 	<h2>{{ section.heading }}</h2>
 
-	<ul class="listing reset">
-		{% for item in items %}
-		{% if item.data[section.filter | first] === section.filter | last %}
+	<ul class="{{ section.type }} reset">
+		{% for item in section.items %}
+			{% set match = pool | telepage(item) %}
 			<li class="full-link">
-				<img src="{{ item.data.picture }}" alt="{{ item.data.alt }}">
-				<a href="{{ item.url }}">{{ item.data.name }}</a>
-				<p>{{ item.data.jobTitle }}</p>
+				{% if section.type === 'listing' %}
+					<img src="{{ match.data.picture }}" alt="{{ match.data.alt }}">
+				{% endif %}
+				<a href="{{ match.url }}">{{ match.data.name }}</a>
+				<p>{{ match.data.jobTitle }}</p>
 			</li>
-		{% endif %}
 		{% endfor %}
 	</ul>
 </section>

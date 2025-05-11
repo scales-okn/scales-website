@@ -77,7 +77,9 @@ export default function(eleventyConfig) {
 
     // Find the first item of a collection that matches the path
     eleventyConfig.addFilter("telepage", (collection, title) =>
-        collection.find(({data}) => data.title === title)
+        collection.find(({data, fileSlug}) => 
+            data.title === title || fileSlug === title
+        )
     );
 
     // Pick a text color for a specified background color keyword

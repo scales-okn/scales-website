@@ -32,3 +32,22 @@
 		height: 100%;
 	}
 }
+
+.short_listing {
+	li {
+		border-radius: 15px;
+		background: color-mix(in lch, var(--ground) 85%, var(--accent));
+		display: inline-block;
+		padding: var(--const--1);
+		padding-bottom: var(--const--3);
+		margin: var(--const--3);
+	}
+	a {
+		border-radius: 1ex;
+		padding: .4ex 1ex .2ex;
+	}
+	p {
+		font-style: italic;
+		padding: .4ex 1ex 0;
+	}
+}

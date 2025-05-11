@@ -40,7 +40,8 @@
 		display: inline-block;
 		padding: var(--const--1);
 		padding-bottom: var(--const--3);
-		margin: var(--const--3);
+		margin-bottom: var(--const--1);
+		margin-right: var(--const--3);
 	}
 	a {
 		border-radius: 1ex;

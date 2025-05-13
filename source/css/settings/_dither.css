@@ -1,6 +1,6 @@
 .dither {
 	image-rendering: pixelated;
-	background: no-repeat center url('/icons/pink-navy.png');
+	background: no-repeat center url('/icons/white.png');
 	background-size: max(1500px, 100%);
 	background-color: var(--ground, var(--white));
 }

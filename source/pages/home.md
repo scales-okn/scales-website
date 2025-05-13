@@ -1,6 +1,6 @@
 ---
-title: SCALES
-displayHeading: Welcome to SCALES
+title: Home
+displayHeading: Transforming Court Transparency
 excerpt: null
 publishPage: true
 tableOfContents: false

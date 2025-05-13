@@ -8,7 +8,7 @@ header {
 /*	color: var(--white);*/
 
 	.navgroup {
-		background: var(--accent);
+/*		background: var(--accent);*/
 		border-radius: 15px;
 		color: var(--accentText);
 		font-size: var(--scale-0);
@@ -17,17 +17,21 @@ header {
 	    margin-bottom: var(--scale-4);
 	    display: inline-block;
 
-		a {
+		p, a {
 			display: block;
-			padding: var(--const--1) var(--const-1) var(--const--3);
-
-			&::before {
-				content: '⬅ ';
-			}
+			width: max-content;
+			background: var(--accent);
+			margin-bottom: var(--const--2);
+			border-radius: 10px;
+			padding: var(--const--1) var(--const--1) var(--const--2);
+		}
+		a::before {
+			content: '⬅ ';
 		}
 
 		h1 {
 			margin: 0;
+/*			background: var(--ground);*/
 		}
 	}
 

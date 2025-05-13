@@ -14,6 +14,11 @@
       <a href="/who-we-are">Who We Are</a>
       <h1>{{ text }}</h1>
     </div>
+    {% elif page.fileSlug === 'home' %}
+    <div class="navgroup">
+      <p>Welcome to SCALES</p>
+      <h1>{{ text }}</h1>
+    </div>
     {% else %}
       <h1>{{ text }}</h1>
     {% endif %}

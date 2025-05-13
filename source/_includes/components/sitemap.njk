@@ -1,9 +1,8 @@
 {% from '../macros.njk' import outline %}
 {% set navId = navId or "top-menu" %}
 
-<nav id="{{ navId }}" aria-label="top navigation menu">
+<nav id="{{ navId }}">
 {% set pages = collections.public %}
-{% if pages %}
     <ul class="reset">
         {% set this = page %}
         {% for that in pages %}
@@ -36,12 +35,5 @@
                 <li>Animations</li>
             </ul>
         </li>#}
-        <li class="colorize-accent full-link mobile-menu-item menu-item">
-            <a href="/">SCALES</a>
-        </li>
-        <li class="colorize-accent full-link mobile-menu-item menu-item">
-            <a href="#footer">↓ Jump to Menu</a>
-        </li>
     </ul>
-{% endif %}
 </nav>

@@ -1,5 +1,20 @@
 nav {
 	font-family: var(--font-sans);
+
+	.logo img {
+		height: var(--scale-2);
+		width: var(--scale-2);
+		backdrop-filter: blur(15px) brightness(0.8);
+		border-radius: 15px;
+		position: relative;
+		font-size: var(--scale--1);
+	}
+
+	.logo:hover img, .logo:focus-within img {
+		height: var(--scale-5);
+		width: auto;
+		padding: 8px 4px;
+	}
 }
 #top-menu {
 	position: fixed;
@@ -17,7 +32,7 @@ nav {
 		margin-inline: auto;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: flex-start;
 		gap: var(--const--4);
 		padding: var(--const--4);
@@ -56,13 +71,13 @@ nav {
 	.menu-item:not(.mobile-menu-item) {
 		display: none;
 	}
+
+	.mobile-menu-item:last-of-type {
+		margin-left: auto;
+	}
 }
 @media (min-width: 60rem) {
 	#top-menu {
-		& > ul {
-			justify-content: flex-start;
-		}
-
 		.menu-item {
 			transition: 500ms border-color ease, 500ms height ease 400ms;
 			interpolate-size: allow-keywords;

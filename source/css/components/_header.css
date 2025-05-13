@@ -22,8 +22,10 @@ header {
 			width: max-content;
 			background: var(--accent);
 			margin-bottom: var(--const--2);
-			border-radius: 10px;
-			padding: var(--const--1) var(--const--1) var(--const--2);
+			border-radius: 15px;
+			height: var(--scale-2);
+			padding: .5em;
+			border: 2px solid transparent;
 		}
 		a::before {
 			content: '⬅ ';

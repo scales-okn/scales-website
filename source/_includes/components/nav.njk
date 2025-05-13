@@ -5,10 +5,20 @@
 {% set pages = collections.public %}
 {% if pages %}
     <ul class="reset">
+        <li class="logo">
+            <a href="/">
+                <img src="/icons/white-logo.svg" alt="logo">
+            </a>
+        </li>
+
         {% set this = page %}
         {% for that in pages %}
             {% set data = that.data %}
-            {% set title = data.title %}
+            {% if that.fileSlug === 'home' %}
+                {% set title = site.title %}
+            {% else %}
+                {% set title = data.title %}
+            {% endif %}
             {% set slug = title | slugify  %}
             {% set url = that.url %}
             {% set elements = data.pageElements %}
@@ -37,7 +47,7 @@
             </ul>
         </li>#}
         <li class="colorize-accent full-link mobile-menu-item menu-item">
-            <a href="/">SCALES</a>
+            <a href="/">{{ site.title }}</a>
         </li>
         <li class="colorize-accent full-link mobile-menu-item menu-item">
             <a href="#footer">↓ Jump to Menu</a>

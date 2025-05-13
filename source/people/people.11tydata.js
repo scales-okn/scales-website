@@ -2,17 +2,13 @@ const colors = ['forest', 'lime', 'orange', 'pink', 'purple', 'teal', 'navy', 'y
 // some silly functions to pick color combiations based on names
 
 export default {
+    permalink: function ({ name, page }) {
+      return `who-we-are/${this.slugify(name)}/`;
+    },
     eleventyComputed: {
       title: data => data.name,
       layout: data => data.layout || "person.njk",
-      groundColor: ({name}) => colors[(
-        name.codePointAt(Math.floor(name.length / 2))
-        ) % colors.length],
-      accentColor: ({name}) => colors[(
-        name.codePointAt(Math.floor(name.length / 2)) 
-        + (
-          name.codePointAt(Math.floor(name.length / 3)) % (colors.length - 1)
-          ) + 1
-        ) % colors.length]
+      groundColor: 'black',
+      accentColor: ({name}) => colors[name.codePointAt(Math.floor(name.length / 3)) % colors.length]
     }
 };

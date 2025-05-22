@@ -23,9 +23,9 @@ collections:
       - {label: Hero Text, name: displayHeading, widget: string, required: false}
       - {label: Hero Image, name: dither, widget: select, options: [default, scales], default: default, dropdown_threshold: 1, required: false}
       - {label: Excerpt, name: excerpt, widget: text, required: false}
-      - {label: Publish Page?, name: publishPage, widget: boolean, default: true}
+      - {label: Appear in Top Menu?, name: publishPage, widget: boolean, default: true}
       - {label: Show Table of Contents?, name: tableOfContents, widget: boolean, default: false}
-      - {label: Menu Order, name: menuOrder, widget: number, default: 2, value_type: int, min: 0}
+      - {label: Menu Order, name: menuOrder, widget: number, default: 2, value_type: int, min: 0, required: false}
       - {label: Ground Color, name: groundColor, widget: select, options: [black, forest, navy, purple, stone], dropdown_threshold: 1}
       - {label: Accent Color, name: accentColor, widget: select, options: [white, lime, orange, pink, yellow, teal], dropdown_threshold: 1}
       - label: Blocks
@@ -53,16 +53,26 @@ collections:
                 min: 1
                 max: 3
                 summary: '{{fields.text}}'
-                fields:
-                - {label: Display Text, name: text, widget: string}
-                - {label: Internal Page, name: title, widget: relation, collection: pages, value_field: title, display_fields: [title], required: false}
-                - {label: External URL, name: url, widget: string, required: false}
+                types:
+                  - label: Internal Link
+                    name: internal
+                    widget: object
+                    fields:
+                    - {label: Display Text, name: text, widget: string}
+                    - {label: Internal Page, name: title, widget: relation, collection: pages, value_field: title, display_fields: [title]}
+                  - label: External Link
+                    name: external
+                    widget: object
+                    fields:
+                    - {label: Display Text, name: text, widget: string}
+                    - {label: External URL, name: url, widget: string}
           - label: Figure
             name: figure
             widget: object
             fields: 
               - {label: Image, name: imgSrc, widget: image}
               - {label: Alt Text, name: imgAlt, widget: string, required: false}
+              - {label: Color, name: color, widget: select, options: [white, black, forest, navy, purple, stone, lime, orange, pink, teal, yellow], required: false}
               - {label: Caption, name: caption, widget: text, required: false}
           - label: Listing
             name: listing

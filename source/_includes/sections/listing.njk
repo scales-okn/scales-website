@@ -1,13 +1,18 @@
 {% set pool = collections[section.collection] %}
+{% if section.view === 'list' %}
+	{% set type = 'short_listing' %}
+{% else %}
+	{% set type = 'listing' %}
+{% endif %}
 
 <section id="{{ section.heading | slugify }}">
 	<h2>{{ section.heading }}</h2>
 
-	<ul class="{{ section.type }} reset">
+	<ul class="{{ type }} reset">
 		{% for item in section.items %}
 			{% set match = pool | telepage(item) %}
 			<li class="full-link">
-				{% if section.type === 'listing' %}
+				{% if type === 'listing' %}
 					<img src="{{ match.data.picture }}" alt="{{ match.data.alt }}">
 				{% endif %}
 				<a href="{{ match.url }}">{{ match.data.name }}</a>

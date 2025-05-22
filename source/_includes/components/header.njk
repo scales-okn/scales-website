@@ -1,4 +1,4 @@
-{% if dither %}
+{% if dither and dither !== 'default' %}
   {% set ditherUrl = ['/icons/', dither, '.png' ] | join %}
 {% else %}
   {% set ditherUrl = ['/icons/', accentColor, '.png' ] | join %}

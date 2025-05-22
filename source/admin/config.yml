@@ -48,7 +48,7 @@ collections:
               - label: Cards
                 name: cards
                 label_singular: card
-                hint: Add one to three cards. Each can link to an internal page or extenal URL— please use only one of those fields.
+                hint: 'Add one to three cards. Each can link to an internal page or extenal URL.'
                 widget: list
                 min: 1
                 max: 3
@@ -68,14 +68,16 @@ collections:
                     - {label: External URL, name: url, widget: string}
           - label: Figure
             name: figure
+            hint: 'Select an image to create a pictorial figure, or simply write a caption to create a textual call-out.'
             widget: object
             fields: 
-              - {label: Image, name: imgSrc, widget: image}
+              - {label: Image, name: imgSrc, widget: image, required: false}
               - {label: Alt Text, name: imgAlt, widget: string, required: false}
               - {label: Color, name: color, widget: select, options: [white, black, forest, navy, purple, stone, lime, orange, pink, teal, yellow], required: false}
               - {label: Caption, name: caption, widget: text, required: false}
           - label: Listing
             name: listing
+            hint: 'Currently, the only entities to list are People.'
             widget: object
             fields:
               - {label: Heading, name: heading, widget: string}

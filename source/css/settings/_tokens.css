@@ -7,7 +7,6 @@ html {
 	--navy: #284666;
 	--purple: #582b4a;
 	--stone: #544e48;
-	--brown: #583a2b;
 
 	--lime: #b7df3e;
 	--orange: #ff7000;
@@ -18,13 +17,13 @@ html {
 
 html {
 	/* Sizes that Grow */
-	--scale-10: calc(var(--scale-0) * pow(1.4, 10));
-	--scale-6: calc(var(--scale-0) * pow(1.4, 6));
-	--scale-5: calc(var(--scale-0) * pow(1.4, 5));
-	--scale-4: calc(var(--scale-0) * pow(1.4, 4));
-	--scale-3: calc(var(--scale-0) * pow(1.4, 3));
-	--scale-2: calc(var(--scale-0) * pow(1.4, 2));
-	--scale-1: calc(var(--scale-0) * pow(1.4, 1));
+	--scale-10: calc(var(--scale-0) * 28.9); /* pow(1.4, 10) */
+	--scale-6: calc(var(--scale-0) * 7.5); /* pow(1.4, 6) */
+	--scale-5: calc(var(--scale-0) * 5.5); /* pow(1.4, 5) */
+	--scale-4: calc(var(--scale-0) * 3.8); /* pow(1.4, 4) */
+	--scale-3: calc(var(--scale-0) * 2.7); /* pow(1.4, 3) */
+	--scale-2: calc(var(--scale-0) * 2); /* pow(1.4, 2) */
+	--scale-1: calc(var(--scale-0) * 1.4); /* pow(1.4, 1) */
 	--scale-0: clamp(1rem, 0.7rem + 0.7vw, 1.4rem);
 	--scale--1: 0.9rem;
 	--scale--2: 0.8rem;
@@ -33,23 +32,23 @@ html {
 	--fast--1: clamp(2.744rem, 10vw - 1rem, 5.378rem);
 
 	/* Sizes that Stay the Same */
-	--const-13: calc(1rem * pow(1.4, 13));
-	--const-12: calc(1rem * pow(1.4, 12));
-	--const-11: calc(1rem * pow(1.4, 11));
-	--const-10: calc(1rem * pow(1.4, 10));
-	--const-9: calc(1rem * pow(1.4, 9));
-	--const-8: calc(1rem * pow(1.4, 8));
-	--const-6: calc(1rem * pow(1.4, 6));
-	--const-5: calc(1rem * pow(1.4, 5));
-	--const-4: calc(1rem * pow(1.4, 4));
-	--const-3: calc(1rem * pow(1.4, 3));
-	--const-2: calc(1rem * pow(1.4, 2));
-	--const-1: calc(1rem * pow(1.4, 1));
+	--const-13: calc(1rem * 79.4); /* pow(1.4, 13) */
+	--const-12: calc(1rem * 56.7); /* pow(1.4, 12) */
+	--const-11: calc(1rem * 40.5); /* pow(1.4, 11) */
+	--const-10: calc(1rem * 28.9); /* pow(1.4, 10) */
+	--const-9: calc(1rem * 20.7); /* pow(1.4, 9) */
+	--const-8: calc(1rem * 14.8); /* pow(1.4, 8) */
+	--const-6: calc(1rem * 7.5); /* pow(1.4, 6) */
+	--const-5: calc(1rem * 5.5); /* pow(1.4, 5) */
+	--const-4: calc(1rem * 3.8); /* pow(1.4, 4) */
+	--const-3: calc(1rem * 2.7); /* pow(1.4, 3) */
+	--const-2: calc(1rem * 2); /* pow(1.4, 2) */
+	--const-1: calc(1rem * 1.4); /* pow(1.4, 1) */
 	--const-0: 1rem;
-	--const--1: calc(1rem * pow(1.4, -1));
-	--const--2: calc(1rem * pow(1.4, -2));
-	--const--3: calc(1rem * pow(1.4, -3));
-	--const--4: calc(1rem * pow(1.4, -4));
+	--const--1: calc(1rem * .74); /* pow(1.4, -1) */
+	--const--2: calc(1rem * .51); /* pow(1.4, -2) */
+	--const--3: calc(1rem * .36); /* pow(1.4, -3) */
+	--const--4: calc(1rem * .26); /* pow(1.4, -4) */
 
 	--const-max: 87.5rem;
 
@@ -59,5 +58,4 @@ html {
 	--font-serif-1: "Redaction 10", "Redaction", serif;
 	--font-serif-2: "Redaction 20", "Redaction", serif;
 	--font-serif-3: "Redaction 35", "Redaction", serif;
-	--font-serif-4: "Redaction 50", "Redaction", serif;
 }

@@ -1,6 +1,6 @@
 header {
 	height: auto;
-	min-height: min(1000px, 80lvh);
+	min-height: 50lvh;
 	padding: var(--scale-5) var(--fast-0) var(--scale-0);
 	position: relative;
 	background-color: var(--ground);

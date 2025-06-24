@@ -10,7 +10,7 @@ pageElements:
   - type: listing
     collection: people
     heading: Staff
-    items: [kat, kaitlyn, luis, scott, danny, shelleen]
+    items: [kat, kaitlyn, luis, scott, danny, shelleen, nikhil]
   - type: listing
     collection: people
     heading: Board

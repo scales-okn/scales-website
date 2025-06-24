@@ -18,6 +18,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("source/icons");
     eleventyConfig.addPassthroughCopy("source/admin");
     eleventyConfig.addPassthroughCopy("source/robots.txt");
+    eleventyConfig.addPassthroughCopy("source/_headers");
     eleventyConfig.addPassthroughCopy("source/media/*.pdf");
 
     eleventyConfig.addGlobalData("thisYear", () => new Date().getFullYear())

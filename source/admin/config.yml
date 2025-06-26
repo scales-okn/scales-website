@@ -2,7 +2,7 @@ backend:
   name: github
   repo: scales-okn/scales-website
   branch: main
-  base_url: https://sveltia-cms-auth.orb-389.workers.dev/
+  base_url: https://scales-okn.org/auth/
 
 media_folder: source/media
 public_folder: /media

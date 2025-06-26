@@ -18,6 +18,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("source/icons");
     eleventyConfig.addPassthroughCopy("source/admin");
     eleventyConfig.addPassthroughCopy("source/robots.txt");
+    eleventyConfig.addPassthroughCopy("source/_headers");
     eleventyConfig.addPassthroughCopy("source/media/*.pdf");
 
     eleventyConfig.addGlobalData("thisYear", () => new Date().getFullYear())
@@ -125,75 +126,9 @@ export default function(eleventyConfig) {
     /* ---
     * Image Plugin
     * https://www.11ty.dev/docs/plugins/image/
-    * This is an async shortcode, so it can't be used in a njk macro
-    * or normal loop, but does work in an asyncAll or asyncEach loop
     */ 
     eleventyConfig.addPlugin(eleventyImageTransformPlugin);
-    eleventyConfig.addShortcode("image", async function (src, alt, classes, sizes, lazy=true) {
-        let metadata = await Image(src, {
-            widths: [600, 1200, 2000],
-            formats: [
-                "jpeg", //  0.93s build
-                // "avif", // 16.64s build
-                "webp", // 1.97s build
-            ],
-            outputDir: "_site/img/",
-        });
 
-        const orientation = (metadata.jpeg[0].width < metadata.jpeg[0].height)
-            ? 'portrait'
-            : 'landscape'
-
-        // A 10px wide version is created for background placeholder blur.
-        // The file itself is not used, but is written to the directory for caching.
-        const mini = await Image(src, {
-            widths: [10],
-            formats: ["png"],
-            outputDir: "img/"
-        });
-        const minidata = fs.readFileSync(`.${mini.png[0].url}`, "base64");
-
-        let imageAttributes = {
-            alt: alt || '',
-            sizes: sizes || '50vw',
-            loading: lazy ? "lazy" : "eager",
-            decoding: "async",
-            class: classes || '',
-            style: `background-image:url(data:image/png;base64,${minidata})`,
-            "data-orientation": orientation,
-        };
-
-        return Image.generateHTML(metadata, imageAttributes);
-    });
-
-    eleventyConfig.addShortcode("imgpath", async function (src) {
-        let metadata = await Image(src, {
-            widths: [1200],
-            formats: ["jpg"],
-            outputDir: "_site/img/",
-        })
-
-        return metadata.jpeg[0].url
-    })
-
-    eleventyConfig.addShortcode("favicon", async function (src) {
-        const ico = await Image(src, {
-            widths: [32],
-            formats: ["png"],
-            outputDir: "_site/",
-            filenameFormat: () => "favicon.png"
-        });
-
-        const touch = await Image(src, {
-            widths: [180],
-            formats: ["png"],
-            outputDir: "_site/",
-            filenameFormat: () => "apple-touch-icon.png"
-        });
-
-        return `<link rel="icon" href="/favicon.png" sizes="32x32">
-            <link rel="apple-touch-icon" href="/apple-touch-icon.png">`
-    });
 
     /* ---
     * CSS Transpilation, Bundling, and Minification

@@ -6,7 +6,7 @@ backend:
 
 media_folder: source/media
 public_folder: /media
-logo_url: /icons/favicon.ico
+logo_url: /icons/favicon_purple.png
 
 media_libraries:
   stock_assets:

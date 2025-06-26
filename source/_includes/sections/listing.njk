@@ -13,7 +13,7 @@
 			{% set match = pool | telepage(item) %}
 			<li class="full-link">
 				{% if type === 'listing' %}
-					<img src="{{ match.data.picture }}" alt="{{ match.data.alt }}">
+					<img src="{{ match.data.picture }}" alt="{{ match.data.alt }}" eleventy:widths="855" loading="lazy">
 				{% endif %}
 				<a href="{{ match.url }}">{{ match.data.name }}</a>
 				<p>{{ match.data.jobTitle }}</p>

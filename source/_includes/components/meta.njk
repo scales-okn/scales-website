@@ -7,9 +7,9 @@
 <meta property="og:description" content="{{ excerpt or site.mission }}">
 <meta name="twitter:description" content="{{ excerpt or site.mission }}">
 
-<link rel="canonical" href="{{ page.url }}">
-<meta property="og:url" content="{{ page.url }}">
-<meta name="twitter:url" content="{{ page.url }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 
 {#  {% set metaimage = headerImage or homepage.image %}
 <meta name="twitter:image" content="{% imgpath metaimage.imgSrc %}">

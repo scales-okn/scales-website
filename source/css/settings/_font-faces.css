@@ -1,13 +1,14 @@
 @font-face {
-    font-family: 'Redaction';
-    src: url('/fonts/Redaction-Regular.woff2') format('woff2');
+    font-family: 'VG5000';
+    src: url('/fonts/VG5000-Regular_web.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
-    font-family: 'Redaction 50';
-    src: url('/fonts/Redaction_50-Regular.woff2') format('woff2');
+    font-family: 'Redaction';
+    src: url('/fonts/Redaction-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -26,10 +27,69 @@
     font-style: italic;
     font-display: swap;
 }
+
 @font-face {
-    font-family: 'VG5000';
-    src: url('/fonts/VG5000-Regular_web.woff2') format('woff2');
+    font-family: 'Redaction 10';
+    src: url('/fonts/Redaction_10-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Redaction 10';
+    src: url('/fonts/Redaction_10-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Redaction 10';
+    src: url('/fonts/Redaction_10-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Redaction 20';
+    src: url('/fonts/Redaction_20-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Redaction 20';
+    src: url('/fonts/Redaction_20-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Redaction 20';
+    src: url('/fonts/Redaction_20-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Redaction 35';
+    src: url('/fonts/Redaction_35-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Redaction 35';
+    src: url('/fonts/Redaction_35-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Redaction 35';
+    src: url('/fonts/Redaction_35-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
 }

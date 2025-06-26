@@ -10,9 +10,7 @@ pageElements:
   - type: markdown
     heading: Sign Up
     body: |
-      The best way to stay up-to-date with SCALES happenings and data releases is to sign up for our quarterly newsletter. 
-      
-      [newsletter signup form]
+      The best way to stay up-to-date with SCALES happenings and data releases is to sign up for our [quarterly newsletter](https://scalesokn.substack.com/subscribe).
   - type: markdown
     heading: Donate
     body: |

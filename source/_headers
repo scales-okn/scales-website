@@ -1,0 +1,6 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+  Strict-Transport-Security: max-age=300; includeSubDomains
+  Content-Security-Policy: default-src 'self'; style-src-attr 'unsafe-inline'

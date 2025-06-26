@@ -18,7 +18,9 @@
     {% endif %}
 
     <div class="easy-flex">
-        <a href="/">Newsletter</a>
+        {% for link in site.social_links %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}
     </div>
 
     {% set navId = 'footer-menu' %}

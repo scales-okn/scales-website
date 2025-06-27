@@ -18,6 +18,7 @@ pageElements:
       - Luís Amaral
       - Scott Daniel
       - Danny O'Neal
+      - Nikhil Yeminedi
       - Shelleen Akin
     collection: people
   - type: listing

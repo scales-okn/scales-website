@@ -1,10 +1,10 @@
 {
   "title": "SCALES-OKN",
-  "url": "https://scales-okn.org/",
+  "url": "https://scales-okn.org",
   "mission": "SCALES improves court transparency by providing enriched data for the public, policymakers, researchers, and legal professionals.",
   "homeSlug": "home",
   "logo": "/icons/white-logo.svg",
-  "favicon": "/icons/favicon.ico",
+  "favicon": "/source/icons/favicon32.png",
   "language": "en",
   "email": "info@scales-okn.org",
   "address": "",
@@ -14,5 +14,7 @@
       "name": "Newsletter",
       "url": "https://scalesokn.substack.com/subscribe"
     }
-  ]
+  ],
+  "construction": false,
+  "description": "SCALES-OKN is transforming the transparency and accountability of the federal judiciary"
 }

@@ -17,6 +17,6 @@ Using Nunjucks for templating and LightningCSS for styling. Page editing is stru
 
 ## Deployment
 
-This site is built and deployed by [Cloudflare Pages](https://dash.cloudflare.com/389b632025d241d280ec45f45103cd70/pages/view/scales-website). Changes made to the `main` branch will be built immediately (takes ~30 seconds), and pull requests to main will generate preview deployments.
+This site is built and deployed by [Cloudflare Pages](https://dash.cloudflare.com/389b632025d241d280ec45f45103cd70/pages/view/scales-website). Changes made to the `main` branch will be built immediately (takes ~30 seconds), and pull requests to `main` will generate preview deployments.
 
-We use Sveltia CMS for editing, with a [Cloudflare Worker](https://dash.cloudflare.com/389b632025d241d280ec45f45103cd70/workers/services/view/sveltia-cms-auth/production/metrics) and [GitHub OAuth App](https://github.com/settings/applications/3012231) for authentication.
+We use [Sveltia CMS](https://github.com/sveltia/sveltia-cms-auth/) for editing directly on `main`, with a [Cloudflare Worker](https://dash.cloudflare.com/389b632025d241d280ec45f45103cd70/workers/services/view/sveltia-cms-auth/production/metrics) and [GitHub OAuth App](https://github.com/settings/applications/3012231) for authentication.

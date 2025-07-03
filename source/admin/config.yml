@@ -1,0 +1,137 @@
+backend:
+  name: github
+  repo: scales-okn/scales-website
+  branch: main
+  base_url: https://auth.scales-okn.org/
+
+media_folder: source/media
+public_folder: /media
+logo_url: /icons/favicon_purple.png
+
+media_libraries:
+  stock_assets:
+    providers: []
+
+editor: {preview: false}
+
+collections:
+  - name: pages
+    label: Pages
+    folder: source/pages
+    extension: md
+    create: true
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Hero Text, name: displayHeading, widget: string, required: false}
+      - {label: Hero Image, name: dither, widget: select, options: [default, scales], default: default, dropdown_threshold: 1, required: false}
+      - {label: Excerpt, name: excerpt, widget: text, required: false}
+      - {label: Appear in Top Menu?, name: publishPage, widget: boolean, default: true}
+      - {label: Show Table of Contents?, name: tableOfContents, widget: boolean, default: false}
+      - {label: Menu Order, name: menuOrder, widget: number, default: 2, value_type: int, min: 0, required: false}
+      - {label: Ground Color, name: groundColor, widget: select, options: [black, forest, navy, purple, stone], dropdown_threshold: 1}
+      - {label: Accent Color, name: accentColor, widget: select, options: [white, lime, orange, pink, yellow, teal], dropdown_threshold: 1}
+      - label: Blocks
+        name: pageElements
+        label_singular: block
+        widget: list
+        types:
+          - label: Text
+            name: markdown
+            widget: object
+            summary: '{{fields.header}}'
+            fields:
+              - {label: Heading, name: heading, widget: string, required: false}
+              - {label: Body, name: body, widget: markdown, buttons: [bold, italic, link, heading-one, heading-two, heading-three, bulleted-list, numbered-list], editor_components: []}
+              - {label: Aside, name: aside, widget: markdown, buttons: [bold, italic, link, heading-one, heading-two, heading-three, bulleted-list, numbered-list], editor_components: [image], minimal: true, required: false}
+          - label: Cards
+            name: cards
+            widget: object
+            fields:
+              - label: Cards
+                name: cards
+                label_singular: card
+                hint: 'Add one to three cards. Each can link to an internal page or extenal URL.'
+                widget: list
+                min: 1
+                max: 3
+                summary: '{{fields.text}}'
+                types:
+                  - label: Internal Link
+                    name: internal
+                    widget: object
+                    fields:
+                    - {label: Display Text, name: text, widget: string}
+                    - {label: Internal Page, name: title, widget: relation, collection: pages, value_field: title, display_fields: [title]}
+                  - label: External Link
+                    name: external
+                    widget: object
+                    fields:
+                    - {label: Display Text, name: text, widget: string}
+                    - {label: External URL, name: url, widget: string}
+          - label: Figure
+            name: figure
+            hint: 'Select an image to create a pictorial figure, or simply write a caption to create a textual call-out.'
+            widget: object
+            fields: 
+              - {label: Image, name: imgSrc, widget: image, required: false}
+              - {label: Alt Text, name: imgAlt, widget: string, required: false}
+              - {label: Color, name: color, widget: select, options: [white, black, forest, navy, purple, stone, lime, orange, pink, teal, yellow], required: false}
+              - {label: Caption, name: caption, widget: text, required: false}
+          - label: Listing
+            name: listing
+            hint: 'Currently, the only entities to list are People.'
+            widget: object
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: View, name: view, widget: select, options: [grid, list], default: grid}
+              - label: Items
+                name: items
+                label_singular: item
+                widget: list
+                field:
+                  label: Person
+                  name: person
+                  widget: relation
+                  collection: people
+                  value_field: name
+                  display_fields: [name]
+  - label: People
+    name: people
+    folder: source/people
+    extension: md
+    create: true
+    fields:
+      - {label: Name, name: name, widget: string}
+      - {label: Role, name: jobTitle, widget: string}
+      - {label: Picture, name: picture, widget: image}
+      - {label: Bio, name: bio, widget: markdown, buttons: [bold, italic, link, bulleted-list, numbered-list], editor_components: [], required: false}
+  - label: Settings
+    name: settings
+    media_folder: /source/icons
+    files:
+      - label: Site
+        name: site
+        file: source/_data/site.json
+        fields:
+          - {label: Title, name: title, widget: string, default: SCALES-OKN}
+          - {label: URL, name: url, widget: string, default: https://scales-okn.org/}
+          - {label: Mission, name: mission, widget: text}
+          - {label: Homepage, name: homeSlug, widget: relation, display_fields: [title], default: home, collection: pages}
+          - {label: Display Logo, name: logo, widget: image}
+          - {label: Tab Favicon, name: favicon, widget: image}
+          - {label: Language, name: language, widget: select, options: [en]}
+          - {label: Email, name: email, widget: string, required: false}
+          - {label: Address, name: address, widget: string, required: false}
+          - {label: Address Line 2, name: address_2, widget: string, required: false}
+          - label: Social Links
+            name: social_links
+            label_singular: link
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: URL
+                name: url
+                widget: string

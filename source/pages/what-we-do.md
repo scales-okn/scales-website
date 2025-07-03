@@ -39,5 +39,10 @@ pageElements:
     heading: Explore
     body: 'The [SCALES Data Explorer](https://dataexplorer.scales-okn.org/) can answer many types of questions. For example, it can provide insight into: the distribution of federal criminal prosecutions of   immigration or firearm trafficking across U.S. courts; how judges in the same   jurisdictions make decisions differently; quantifying the burdens of different  experiences of court costs and fee waivers for self-represented litigants compared to represented litigants; and analyzing how actors such as corporations recur and reappear across different types of cases. Give it a try!'
     aside: ''
+  - type: cards
+    cards:
+      - type: internal
+        text: Sharing our results
+        title: Insights
 ---
 

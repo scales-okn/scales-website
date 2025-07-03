@@ -17,7 +17,7 @@ pageElements:
     body: To use the SCALES Data Explorer, just follow the link below where you will be   prompted to sign in or sign up with a free account using any valid email address. This will allow  you to access the data explorer, where all our SCALES data holdings are integrated into an easy-to-use data tool where you can save your work and analysis that you run. If you want to know more about SCALES software or tools, you can check out our full documentation.
     aside: ''
   - type: cards
-    cards
+    cards:
       - type: external
         text: Data Explorer
         url: https://dataexplorer.scales-okn.org/sign-in

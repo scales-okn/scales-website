@@ -24,6 +24,9 @@ pageElements:
       - type: external
         text: Documentation
         url: https://docs.scales-okn.org/
+      - type: external
+        text: Download our data files
+        url: https://fileserver.scales-okn.org/
   - type: markdown
     heading: Showcase
     body: 'SCALES data can help show whether litigants are getting outcomes in court   depending on where they are assigned. The graph below shows that the judge you get matters a lot, with some judges more likely than others to deny litigants the ability to proceed in cases where they can’t afford to pay court fees to initiate a case:'

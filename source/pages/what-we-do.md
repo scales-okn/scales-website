@@ -22,7 +22,7 @@ pageElements:
         text: Data Explorer
         url: https://dataexplorer.scales-okn.org/sign-in
       - type: external
-        text: Documentation
+        text: Docs
         url: https://docs.scales-okn.org/
       - type: external
         text: Download our data files

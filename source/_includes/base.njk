@@ -6,6 +6,12 @@
     {% set headTitle = [title, ' | ', site.title] | join %}
 {% endif %}
 
+{% if dither and dither !== 'default' %}
+    {% set ditherUrl = ['/icons/', dither, '.png' ] | join %}
+{% else %}
+    {% set ditherUrl = ['/icons/', accentColor, '.png' ] | join %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
 <head>
@@ -17,6 +23,9 @@
     <link rel="icon" href="/icons/favicon32.png" sizes="32x32">
 
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preload" href="/fonts/Redaction-Regular.woff2" as="font">
+    <link rel="preload" href="/fonts/VG5000-Regular_web.woff2" as="font">
+    <link rel="preload" href="{{ ditherUrl }}" as="image">
 
     {% include "components/meta.njk" %}
 </head>

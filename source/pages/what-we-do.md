@@ -40,7 +40,7 @@ pageElements:
     caption: A figure depicting the likelihood that a judge waives court fees minus the likelihood that other judges in the same district waives fees. The line on the graph indicates that there’s a significant difference in judge behavior, even in the same district.
   - type: markdown
     heading: Documentation
-    body: If you want to learn more about SCALES software and tools, you can visit our documentation site. To learn about the shape of our dataset, you can take a look at the interactive ontology visualization below, which displays the graph-data structure we developed for our[ Integrated Justice Platform](https://scales-okn.org/integrated-justice-project/) project.
+    body: If you want to learn more about SCALES software and tools, you can visit our documentation site. To learn about the shape of our dataset, you can take a look at the interactive ontology visualization below, which displays the graph-data structure we developed for our [Integrated Justice Platform](https://scales-okn.org/integrated-justice-project/) project.
     aside: ''
   - type: cards
     cards:
